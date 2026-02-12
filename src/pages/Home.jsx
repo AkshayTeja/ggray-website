@@ -284,7 +284,7 @@ const Home = () => {
               <Button
                 onClick={handleGetQuote}
                 size="lg"
-                className="button-shine bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 text-lg font-semibold transition-all hover:shadow-xl"
+                className=" bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 text-lg font-semibold transition-all hover:shadow-2xl"
               >
                 Get a Free Layout Plan
                 <ArrowRight className="ml-2" size={20} />
@@ -293,7 +293,7 @@ const Home = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="button-shine bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg font-semibold transition-all w-full sm:w-auto"
+                  className=" bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg font-semibold transition-all w-full sm:w-auto"
                 >
                   View Products
                 </Button>
@@ -390,7 +390,7 @@ const Home = () => {
                 viewport={{ once: true }}
               >
                 <Link to="/about">
-                  <Button className="button-shine bg-gray-900 hover:bg-gray-800 text-white px-6 py-3">
+                  <Button className=" bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 font-semibold transition-all hover:shadow-2xl">
                     Learn More About Us
                     <ArrowRight className="ml-2" size={18} />
                   </Button>
@@ -540,7 +540,7 @@ const Home = () => {
             <Link to="/products">
               <Button
                 size="lg"
-                className="button-shine bg-orange-600 hover:bg-orange-700 text-white px-8 py-6"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 font-semibold transition-all hover:shadow-2xl"
               >
                 View All Products
                 <ArrowRight className="ml-2" size={18} />
@@ -600,80 +600,75 @@ const Home = () => {
 
       {/* Testimonials */}
       {/* Testimonials Section */}
-<section className="py-20 bg-white overflow-hidden">
-  <div className="max-w-7xl mx-auto px-4">
+      <section className="py-20 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Heading */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Trusted by leading businesses across Northeast India
+            </p>
+          </motion.div>
 
-    {/* Heading */}
-    <motion.div
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="text-center mb-12"
-    >
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        What Our Clients Say
-      </h2>
-      <p className="text-gray-600 max-w-2xl mx-auto">
-        Trusted by leading businesses across Northeast India
-      </p>
-    </motion.div>
+          {/* Testimonials Grid */}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {testimonials.map((testimonial) => (
+              <motion.div
+                key={testimonial.id}
+                variants={item}
+                transition={{ duration: 0.6 }}
+              >
+                <Card className="border-2 border-gray-100 hover:shadow-xl transition-all">
+                  <CardContent className="p-6">
+                    <Quote className="text-orange-600 mb-4" size={40} />
 
-    {/* Testimonials Grid */}
-    <motion.div
-      variants={container}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      className="grid md:grid-cols-3 gap-8"
-    >
-      {testimonials.map((testimonial) => (
-        <motion.div
-          key={testimonial.id}
-          variants={item}
-          transition={{ duration: 0.6 }}
-        >
-          <Card className="border-2 border-gray-100 hover:shadow-xl transition-all">
-            <CardContent className="p-6">
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star
+                          key={i}
+                          size={18}
+                          className="fill-orange-500 text-orange-500"
+                        />
+                      ))}
+                    </div>
 
-              <Quote className="text-orange-600 mb-4" size={40} />
+                    <p className="text-gray-700 mb-6 leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
 
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    size={18}
-                    className="fill-orange-500 text-orange-500"
-                  />
-                ))}
-              </div>
-
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                "{testimonial.content}"
-              </p>
-
-              <div className="border-t pt-4">
-                <div className="font-bold text-gray-900">
-                  {testimonial.name}
-                </div>
-                <div className="text-sm text-gray-600">
-                  {testimonial.role}
-                </div>
-                <div className="text-sm text-orange-600">
-                  {testimonial.company}
-                </div>
-              </div>
-
-            </CardContent>
-          </Card>
-        </motion.div>
-      ))}
-    </motion.div>
-
-  </div>
-</section>
-
+                    <div className="border-t pt-4">
+                      <div className="font-bold text-gray-900">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        {testimonial.role}
+                      </div>
+                      <div className="text-sm text-orange-600">
+                        {testimonial.company}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
@@ -688,7 +683,7 @@ const Home = () => {
             <Button
               onClick={handleGetQuote}
               size="lg"
-              className="button-shine bg-orange-600 hover:bg-orange-700 text-white px-12 py-6 text-lg font-semibold transition-all hover:shadow-2xl"
+              className=" bg-orange-600 hover:bg-orange-700 text-white px-12 py-6 text-lg font-semibold transition-all hover:shadow-2xl"
             >
               Contact Us Now
               <ArrowRight className="ml-2" size={20} />
