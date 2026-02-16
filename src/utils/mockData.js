@@ -16,24 +16,25 @@ export const products = [
     id: 1,
     name: "Pallet Rack",
     description: "Heavy-duty pallet racking systems designed for maximum storage efficiency and easy access to goods in warehouses.",
-    image: "https://images.unsplash.com/photo-1661157072508-c34b1dc84b94",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254507/palletracks_gsppv2.jpg",
     features: ["High load capacity", "Customizable height", "Easy installation", "Durable construction"]
   },
   {
     id: 2,
     name: "Double Deep Pallet Rack",
     description: "High-density storage solution with double-deep configuration for maximum space utilization and increased storage capacity.",
-    image: "https://images.unsplash.com/photo-1661157072508-c34b1dc84b94",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/double-deep-pallet-rack_yejpaa.jpg",
     features: ["Space optimization", "High density storage", "Cost-effective", "Selective access"]
   },
   {
     id: 3,
     name: "Slotted Angle Rack",
     description: "Versatile and economical storage solution perfect for light to medium-duty applications with easy assembly.",
-    image: "https://images.unsplash.com/photo-1661156295677-ce91c410be9b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/slotted-angle-rack-1_izib8y.jpg",
     features: ["Easy assembly", "Adjustable shelves", "Cost-effective", "Modular design"]
   },
   {
+    //Picture not there
     id: 4,
     name: "Sectional Panel Rack",
     description: "Robust sectional panel racking system with superior strength and flexibility for diverse storage needs.",
@@ -44,87 +45,88 @@ export const products = [
     id: 5,
     name: "Heavy Duty Channel Rack",
     description: "Industrial-grade channel rack designed to handle extremely heavy loads with maximum durability and stability.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/heavy-duty-channel-rack-new_jec7mp.jpg",
     features: ["Maximum load capacity", "Channel design", "Industrial strength", "Long-lasting"]
   },
   {
     id: 6,
     name: "Pigeon Hole Rack",
     description: "Organized storage solution with multiple compartments ideal for sorting and storing small parts and components.",
-    image: "https://images.unsplash.com/photo-1661156295677-ce91c410be9b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254510/pigeon-hole-rack_jbtneg.jpg",
     features: ["Multiple compartments", "Easy sorting", "Small parts storage", "Organized access"]
   },
   {
     id: 7,
     name: "Multi Tier Racking System",
     description: "Multi-level storage platform to maximize warehouse vertical space with safe access to all levels.",
-    image: "https://images.unsplash.com/photo-1685483749753-0dab7e144794",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254510/multi-tier-racking-systems-1_cyewyk.jpg",
     features: ["Multiple levels", "Vertical optimization", "Safe access", "Custom configuration"]
   },
   {
     id: 8,
     name: "Industrial Rack",
     description: "Heavy-duty industrial racks engineered for demanding warehouse environments and high-volume operations.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254510/industrial-rack-1_ezjtgb.jpg",
     features: ["Industrial grade", "High capacity", "Robust design", "Versatile usage"]
   },
   {
     id: 9,
     name: "Long Span Rack",
     description: "Wide-span shelving system perfect for storing large, bulky items with extended shelf lengths.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254510/long-span-racks_gfueok.jpg",
     features: ["Extended span", "Large item storage", "Adjustable levels", "Heavy-duty beams"]
   },
   {
     id: 10,
     name: "Metal Racking Storage",
     description: "Durable metal storage racking solution for organized and efficient warehouse management.",
-    image: "https://images.unsplash.com/photo-1661157072508-c34b1dc84b94",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254509/metal-racking-storage_wrqvrl.png",
     features: ["Metal construction", "Durable finish", "Corrosion resistant", "Easy maintenance"]
   },
   {
     id: 11,
     name: "Godown Rack",
     description: "Specialized racking system designed for godown and warehouse storage with optimal space utilization.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254510/godown-rack-new_abrzwm.png",
     features: ["Warehouse optimized", "High capacity", "Flexible design", "Easy access"]
   },
   {
     id: 12,
     name: "Cable Tray",
     description: "Industrial cable management system for organizing and supporting electrical cables safely and efficiently.",
-    image: "https://images.unsplash.com/photo-1661156295677-ce91c410be9b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/perforated-cable-tray_aj6kbn.jpg",
     features: ["Cable organization", "Easy installation", "Ventilation design", "Corrosion resistant"]
   },
   {
     id: 13,
     name: "Ladder Cable Tray",
     description: "Ladder-type cable tray system providing excellent ventilation and easy cable access for industrial applications.",
-    image: "https://images.unsplash.com/photo-1661156295677-ce91c410be9b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/ladder-cable-tray-new_twk0qo.jpg",
     features: ["Ladder design", "Superior ventilation", "Easy cable access", "Heavy cable support"]
   },
   {
     id: 14,
     name: "Fabric Roll Rack",
     description: "Specialized racks designed for textile and fabric roll storage with easy access and roll protection.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/fabric-roll-rack_osyjoj.jpg",
     features: ["Roll protection", "Easy access", "Space efficient", "Damage prevention"]
   },
   {
     id: 15,
     name: "Fabric Storage Rack",
     description: "Dedicated storage solution for fabric materials with organized compartments and easy retrieval system.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/fabric-storage-rack-new_bsdpjf.jpg",
     features: ["Fabric protection", "Organized storage", "Easy retrieval", "Material safety"]
   },
   {
     id: 16,
     name: "Heavy Duty Rack",
     description: "Extra-strength racking system built to handle the heaviest loads in demanding industrial environments.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/heavy-duty-rack-news_cssu7s.jpg",
     features: ["Maximum load capacity", "Reinforced structure", "Industrial strength", "Long-lasting durability"]
   },
   {
+    //Pic not there
     id: 17,
     name: "Drum Storage Rack",
     description: "Specialized rack designed for safe and efficient storage of drums and cylindrical containers.",
@@ -135,17 +137,18 @@ export const products = [
     id: 18,
     name: "Cantilever Rack",
     description: "Ideal for storing long, bulky items like pipes, timber, and steel bars with easy loading and unloading.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254507/cantilever-rack-1_nsckg4.jpg",
     features: ["Long item storage", "Quick access", "Adjustable arms", "Heavy-duty design"]
   },
   {
     id: 19,
     name: "Spare Parts Rack",
     description: "Organized storage system for spare parts and components with easy identification and quick access.",
-    image: "https://images.unsplash.com/photo-1661156295677-ce91c410be9b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254507/spare-parts-storage-rack_tv5fym.jpg",
     features: ["Parts organization", "Quick identification", "Inventory control", "Easy access"]
   },
   {
+    //Pic not there
     id: 20,
     name: "Die Mould Rack",
     description: "Heavy-duty rack system specifically designed for storing dies and moulds with safe handling features.",
@@ -156,49 +159,91 @@ export const products = [
     id: 21,
     name: "Drawer Rack",
     description: "Multi-drawer storage system for small parts and tools with organized compartments and smooth operation.",
-    image: "https://images.unsplash.com/photo-1661156295677-ce91c410be9b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254507/drawer-rack_rldroc.jpg",
     features: ["Multiple drawers", "Smooth operation", "Small parts storage", "Easy access"]
   },
   {
     id: 22,
     name: "Mobile Compactor",
     description: "Space-saving mobile compactor systems (push-pull/steering type) for efficient document and file storage.",
-    image: "https://images.unsplash.com/photo-1714650601435-67a4d51a0798",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254507/mobile-campactor-news_d4rdxw.jpg",
     features: ["50% space saving", "Easy movement", "Secure storage", "Smooth operation"]
   },
   {
     id: 23,
     name: "Steel Storage Rack",
     description: "Robust steel racking solution for general storage applications with excellent durability and strength.",
-    image: "https://images.unsplash.com/photo-1661157072508-c34b1dc84b94",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/steel-storage-rack_x4juea.jpg",
     features: ["Steel construction", "High durability", "Corrosion resistant", "Versatile use"]
   },
   {
     id: 24,
     name: "Stainless Steel Rack",
     description: "Premium stainless steel racking system ideal for hygienic environments and corrosive conditions.",
-    image: "https://images.unsplash.com/photo-1661156295677-ce91c410be9b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/storage-stainless-steel-racks_z58ras.png",
     features: ["Stainless steel", "Corrosion proof", "Hygienic design", "Easy cleaning"]
   },
-  {
-    id: 25,
-    name: "Modular Mezzanine",
-    description: "Flexible modular mezzanine floor system to maximize vertical space with customizable design options.",
-    image: "https://images.unsplash.com/photo-1685483749753-0dab7e144794",
-    features: ["Modular design", "Space optimization", "Custom layout", "Easy installation"]
+  { 
+  "id": 25,
+  "name": "Modular Mezzanine",
+  "description": "Flexible modular mezzanine floor system to maximize vertical space with customizable design options.",
+  "image": "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/modular-mezzanine-floor-new_z8mrgk.jpg",
+  "features": [
+    "Modular design",
+    "Space optimization",
+    "Custom layout",
+    "Easy installation"
+  ],
+  "specifications": {
+    "Height": "Up to 3.5 meters",
+    "Span Between Columns": "3 to 6 meters",
+    "Surface Finish": "Powder Coated / Painted",
+    "Load Capacity": "300 to 2000 kg/m²",
+    "Staircase Width": "800 mm to 1200 mm",
+    "Handrail Height": "1100 mm standard"
+  },
+  "applications": [
+    "Warehouses – To expand storage space without relocating.",
+    "Manufacturing Units – For extra office space, inventory, or machine placement.",
+    "Retail & Showrooms – To display goods or create office zones above.",
+    "Workshops & Garages – For storing parts, tools, and equipment.",
+    "Distribution Centres – To manage high-volume inventory effectively.",
+    "Corporate Offices – For building cabins, conference rooms, or archives."
+  ]
   },
   {
-    id: 26,
-    name: "Steel Mezzanine",
-    description: "Industrial steel mezzanine floors engineered to double your storage capacity with multi-level access.",
-    image: "https://images.unsplash.com/photo-1685483749753-0dab7e144794",
-    features: ["Steel structure", "Multi-level storage", "Double capacity", "Safe access"]
+  "id": 26,
+  "name": "Steel Mezzanine",
+  "description": "Industrial steel mezzanine floors engineered to double your storage capacity with multi-level access.",
+  "image": "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/steel-mezzanine-floor_grrmdm.png",
+  "features": [
+    "Steel structure",
+    "Multi-level storage",
+    "Double capacity",
+    "Safe access"
+  ],
+  "specifications": {
+    "Unit Height": "Up to 4.5 meters",
+    "Unit Length": "Up to 15 meters",
+    "Load Capacity": "300 kg to 2000 kg/sqm (customised)",
+    "Material": "Mild Steel (IS standard)",
+    "Flooring Options": "Chequered plate, wooden panels",
+    "Finish": "Powder-coated or painted"
   },
+  "applications": [
+    "Warehousing & Logistics – For increasing storage space without relocating.",
+    "Manufacturing Units – For setting up workstations, offices, or storing tools.",
+    "Retail & Showrooms – To create display areas or storage above the main floor.",
+    "Automobile Workshops – For storing spare parts and body components.",
+    "Cold Storage & FMCG – For efficient vertical utilisation of temperature-controlled zones.",
+    "E-commerce Fulfilment Centres – To handle high volume SKUs in a compact area."
+  ]
+},
   {
     id: 27,
     name: "Push Pull Trolley",
     description: "Heavy-duty mild steel platform trolley engineered for smooth, controlled material handling in industrial environments.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259237/Push-Pull-Trolley-Fig.-1.2-1024x882_tm2pft.jpg",
     features: ["300-500 kg capacity", "4 swivel caster wheels", "Powder coated finish", "Fixed push handle"],
     specifications: {
       "Overall Size (L × W × H)": "900 × 600 × 850 mm",
@@ -218,7 +263,7 @@ export const products = [
     id: 28,
     name: "Push Pull Trolley (Plastic Base)",
     description: "Lightweight, impact-resistant plastic platform trolley designed for efficient and effortless material movement.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259235/Push-Pull-Trolley-Plastic-Base-Fig.-1.9_ei5hee.jpg",
     features: ["150-300 kg capacity", "Anti-slip textured surface", "Corrosion-free", "Foldable handle option"],
     specifications: {
       "Overall Size (L × W × H)": "850 × 550 × 850 mm",
@@ -238,7 +283,7 @@ export const products = [
     id: 29,
     name: "Platform Trolley",
     description: "Industrial-grade steel platform trolley built for heavy bulk transportation and long-term durability.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259234/Platform-Trolley_lsemkl.png",
     features: ["500-1000 kg capacity", "Reinforced mild steel", "Heavy solid rubber wheels", "Powder coated finish"],
     specifications: {
       "Overall Size (L × W × H)": "1200 × 750 × 900 mm",
@@ -258,7 +303,7 @@ export const products = [
     id: 30,
     name: "Heavy Duty Hand Trolley",
     description: "Robust steel-frame hand trolley designed for efficient manual handling of heavy industrial loads.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259234/Heavy-Duty-Hand-Trolley-Fig.-1.4_ks35hi.jpg",
     features: ["300-800 kg capacity", "Heavy gauge mild steel", "Pneumatic wheels", "Ergonomic grip handle"],
     specifications: {
       "Overall Size (L × W × H)": "1100 × 600 × 1200 mm",
@@ -278,7 +323,7 @@ export const products = [
     id: 31,
     name: "Heavy Duty Platform Trolley",
     description: "Extra-strength platform trolley engineered for high-load industrial material handling.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259233/HEAVY-DUTY-PLATFORM-TROLLEY_dttf41.png",
     features: ["800-1500 kg capacity", "Reinforced steel structure", "Pneumatic heavy-duty wheels", "Anti-skid steel deck"],
     specifications: {
       "Overall Size (L × W × H)": "1500 × 900 × 950 mm",
@@ -298,7 +343,7 @@ export const products = [
     id: 32,
     name: "Steelbox Cart",
     description: "Deep-body steel box cart designed for secure transport of loose materials and industrial components.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259222/Steel-Box-Cart_ysggp8.jpg",
     features: ["400-800 kg capacity", "Heavy duty steel sheet", "400-500 mm body depth", "Secure containment"],
     specifications: {
       "Overall Size (L × W × H)": "1000 × 700 × 900 mm",
@@ -318,7 +363,7 @@ export const products = [
     id: 33,
     name: "Wiremesh Trolley",
     description: "Durable wire-mesh material handling trolley designed for organized storage and safe movement.",
-    image: "https://images.unsplash.com/photo-1661156295677-ce91c410be9b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259221/Wire-Mesh-Trolley_plsrte.png",
     features: ["300-600 kg capacity", "Galvanized steel mesh", "Lockable swivel casters", "50×50 mm mesh size"],
     specifications: {
       "Overall Size (L × W × H)": "1000 × 800 × 1000 mm",
@@ -338,7 +383,7 @@ export const products = [
     id: 34,
     name: "Box Trolley",
     description: "Fully enclosed heavy-duty box trolley built for safe and secure transportation of goods.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259220/Box-Trolley-Fig.-2.1_pnvmck.jpg",
     features: ["300-700 kg capacity", "Fully enclosed steel body", "Heavy-duty rubber casters", "Spillage prevention"],
     specifications: {
       "Overall Size (L × W × H)": "1000 × 700 × 850 mm",
@@ -358,7 +403,7 @@ export const products = [
     id: 35,
     name: "Box Trolley - Openable Type",
     description: "Heavy-duty openable box trolley engineered for convenient loading and controlled transportation of bulk materials.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259219/Box-Trolley-Openable-type-Fig.-2.3_iplkfz.png",
     features: ["400-800 kg capacity", "Side/front openable panel", "Heavy gauge mild steel", "Easy unloading"],
     specifications: {
       "Overall Size (L × W × H)": "1000 × 700 × 900 mm",
@@ -378,7 +423,7 @@ export const products = [
     id: 36,
     name: "Wiremesh Raised Trolley",
     description: "Elevated wire-mesh platform trolley designed for organized storage and ergonomic material handling.",
-    image: "https://images.unsplash.com/photo-1661156295677-ce91c410be9b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259218/Wire-Mesh-Raised-Trolley_hacewe.jpg",
     features: ["300-600 kg capacity", "Raised wire-mesh platform", "Lockable swivel casters", "Visibility & ventilation"],
     specifications: {
       "Overall Size (L × W × H)": "1000 × 800 × 1000 mm",
@@ -398,7 +443,7 @@ export const products = [
     id: 37,
     name: "Hand Cart",
     description: "Compact industrial hand cart built for efficient manual transportation of medium-weight materials.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259218/Hand-Cart_wscesl.jpg",
     features: ["150-300 kg capacity", "Mild steel tubular frame", "250-300 mm wheels", "Easy maneuverability"],
     specifications: {
       "Overall Size (L × W × H)": "450 × 500 × 1200 mm",
@@ -418,7 +463,7 @@ export const products = [
     id: 38,
     name: "Hand Cart with Foldable Arm",
     description: "Space-efficient foldable hand cart engineered for versatile and convenient industrial material handling.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259217/2-wheel-trolley-2-1536x1536_hprfwp.jpg",
     features: ["150-350 kg capacity", "Foldable support arm", "Solid rubber wheels", "Compact storage"],
     specifications: {
       "Overall Size (L × W × H)": "450 × 500 × 1150 mm",
@@ -438,7 +483,7 @@ export const products = [
     id: 39,
     name: "Double Cylinder Trolley",
     description: "Industrial double-cylinder trolley designed for secure and stable transportation of gas cylinders.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259216/Double-Cylinder-Trolley_i3wx64.jpg",
     features: ["2 gas cylinders", "Safety chain lock", "Heavy duty mild steel", "Stable base support"],
     specifications: {
       "Overall Size (L × W × H)": "900 × 700 × 1100 mm",
@@ -458,7 +503,7 @@ export const products = [
     id: 40,
     name: "Jumbo O2 Cylinder Trolley",
     description: "Extra-strong cylinder trolley engineered specifically for jumbo oxygen cylinders and heavy-duty industrial use.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259215/Jumbo-Oxygen-Cylinder-Trolley-Fig.-3.8_ztku5k.jpg",
     features: ["1 jumbo oxygen cylinder", "Dual chain lock system", "Heavy pneumatic wheels", "Reinforced mild steel"],
     specifications: {
       "Overall Size (L × W × H)": "600 × 700 × 1400 mm",
@@ -478,7 +523,7 @@ export const products = [
     id: 41,
     name: "Cylinder Carrying Trolley",
     description: "Heavy-duty gas cylinder carrying trolley designed for safe and controlled handling in industrial environments.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259214/cylinder-trolley_qdaq02.png",
     features: ["Single industrial cylinder", "Chain securing mechanism", "Solid rubber wheels", "Balanced movement"],
     specifications: {
       "Overall Size (L × W × H)": "500 × 600 × 1200 mm",
@@ -498,7 +543,7 @@ export const products = [
     id: 42,
     name: "LPG Oxygen Cylinder Trolley",
     description: "Specialized LPG and oxygen cylinder trolley designed for dual-cylinder transportation with enhanced safety.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259213/LPG-Oxg-trolley_i4dxob.jpg",
     features: ["LPG + Oxygen cylinder", "Chain lock & support frame", "Heavy gauge steel", "Stable handling"],
     specifications: {
       "Overall Size (L × W × H)": "950 × 750 × 1300 mm",
@@ -518,7 +563,7 @@ export const products = [
     id: 43,
     name: "M.S. Tray Trolley",
     description: "Durable mild steel tray trolley designed for efficient multi-level material handling in industrial environments.",
-    image: "https://images.unsplash.com/photo-1661156295677-ce91c410be9b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259219/Box-Trolley-Openable-type-Fig.-2.3_iplkfz.png",
     features: ["200-400 kg capacity", "Single/double tray option", "4 swivel caster wheels", "Organized movement"],
     specifications: {
       "Overall Size (L × W × H)": "900 × 600 × 1200 mm",
@@ -538,7 +583,7 @@ export const products = [
     id: 44,
     name: "Wheelbarrow",
     description: "Heavy-duty industrial wheelbarrow engineered for easy transport of loose materials and construction loads.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259212/Wheel-Barrow_ucbtqp.jpg",
     features: ["150-300 kg capacity", "Pneumatic front wheel", "Tubular steel frame", "Balanced operation"],
     specifications: {
       "Overall Size (L × W × H)": "1400 × 700 × 800 mm",
@@ -558,7 +603,7 @@ export const products = [
     id: 45,
     name: "S.S. Scrap Trolley",
     description: "Stainless steel scrap trolley designed for hygienic and corrosion-resistant material handling.",
-    image: "https://images.unsplash.com/photo-1661156295677-ce91c410be9b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259211/scrap-trolley_gf8svn.jpg",
     features: ["300-600 kg capacity", "Stainless steel SS 304", "Deep scrap collection body", "Rust-free operation"],
     specifications: {
       "Overall Size (L × W × H)": "1000 × 700 × 900 mm",
@@ -578,7 +623,7 @@ export const products = [
     id: 46,
     name: "Hydraulic Trolley (Pallet Truck)",
     description: "Industrial hydraulic pallet truck engineered for effortless lifting and transportation of palletized goods.",
-    image: "https://images.unsplash.com/photo-1661157072508-c34b1dc84b94",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259201/Hydraulic-Trolley_tq96zn.jpg",
     features: ["2000-3000 kg capacity", "Manual hydraulic pump", "1150 mm fork length", "PU/Nylon wheels"],
     specifications: {
       "Overall Size (L × W × H)": "1500 × 550 × 1200 mm",
@@ -598,7 +643,7 @@ export const products = [
     id: 47,
     name: "Table Lift (Hydraulic Scissor Lift)",
     description: "Hydraulic scissor lift table designed for ergonomic lifting and precise height adjustment of heavy loads.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259200/Table-Lifter_uslcif.jpg",
     features: ["300-1000 kg capacity", "Hydraulic scissor system", "1000-1500 mm max height", "Heavy-duty PU casters"],
     specifications: {
       "Platform Size (L × W)": "1000 × 600 mm",
@@ -618,7 +663,7 @@ export const products = [
     id: 48,
     name: "Stacker Trolley",
     description: "Compact hydraulic stacker trolley designed for lifting, stacking, and pallet positioning in industrial environments.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259199/Stacker-Trolley_l0mnjw.jpg",
     features: ["500-1500 kg capacity", "Up to 3000 mm lift height", "Manual/hydraulic mechanism", "PU/Nylon wheels"],
     specifications: {
       "Overall Size (L × W × H)": "1700 × 800 × 2000 mm",
@@ -638,7 +683,7 @@ export const products = [
     id: 49,
     name: "Hydraulic Drum Lifter",
     description: "Heavy-duty hydraulic drum lifter engineered for safe lifting, tilting, and transportation of industrial drums.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259198/hydraulic_palktq.jpg",
     features: ["200-300 liter drums", "Drum tilt & lock mechanism", "Hydraulic manual pump", "300-500 kg capacity"],
     specifications: {
       "Overall Size (L × W × H)": "1100 × 800 × 2000 mm",
@@ -658,7 +703,7 @@ export const products = [
     id: 50,
     name: "Mobile Mini Crane",
     description: "Portable mobile mini crane designed for precise lifting and positioning of heavy components in confined spaces.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259197/Mobile-Mini-Crane_kaiidm.jpg",
     features: ["500-1000 kg capacity", "Adjustable extension arm", "Hydraulic ram", "Manual swivel boom"],
     specifications: {
       "Overall Size (L × W × H)": "1500 × 900 × 2000 mm",
@@ -678,7 +723,7 @@ export const products = [
     id: 51,
     name: "Drum Carry & Lifter",
     description: "Heavy-duty drum carry and lifter engineered for secure lifting, transporting, and positioning of industrial drums.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259197/Drum-Carry-Lifter_yeimfl.jpg",
     features: ["200-300 liter drums", "Drum locking clamp", "Manual hydraulic system", "PU/Nylon wheels"],
     specifications: {
       "Overall Size (L × W × H)": "1000 × 800 × 1200 mm",
@@ -698,7 +743,7 @@ export const products = [
     id: 52,
     name: "Drum Trolley",
     description: "Robust drum handling trolley designed for smooth horizontal transport of standard industrial drums.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259196/barrel-handling-trolleY_ucmotf.jpg",
     features: ["200-300 liter drums", "250-400 kg capacity", "Mild steel tubular frame", "Stable drum mobility"],
     specifications: {
       "Overall Size (L × W × H)": "1400 × 600 × 900 mm",
@@ -718,7 +763,7 @@ export const products = [
     id: 53,
     name: "Drum Cradle Trolley",
     description: "Ergonomic drum cradle trolley designed for tilting and controlled dispensing of liquid-filled drums.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259195/Drum-Cradle-Trolley_irmshk.jpg",
     features: ["200-300 liter drums", "Controlled tilt mechanism", "Cradle-type support frame", "300-500 kg capacity"],
     specifications: {
       "Overall Size (L × W × H)": "1200 × 700 × 1000 mm",
@@ -738,7 +783,7 @@ export const products = [
     id: 54,
     name: "Three Wheel Drum Trolley",
     description: "Compact three-wheel drum trolley designed for enhanced maneuverability in tight industrial spaces.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259194/rexello-standard-drum-trolley-load-capacity-200-kg_neaprq.jpg",
     features: ["200-300 liter drums", "2 rear + 1 front wheel", "250-400 kg capacity", "Enhanced maneuverability"],
     specifications: {
       "Overall Size (L × W × H)": "1100 × 650 × 1200 mm",
@@ -758,7 +803,7 @@ export const products = [
     id: 55,
     name: "M.S. Ladder Trolley",
     description: "Mobile mild steel ladder trolley designed for safe elevated access in warehouses and industrial facilities.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259193/Mobile-Step-ladder_ztcxbm.png",
     features: ["1500-2000 mm platform height", "150-300 kg capacity", "Guard rails & anti-skid steps", "Lockable swivel casters"],
     specifications: {
       "Overall Size (L × W × H)": "1500 × 800 × 2500 mm",
@@ -778,7 +823,7 @@ export const products = [
     id: 56,
     name: "Wall Support Ladder",
     description: "Lightweight wall-support ladder designed for safe vertical access in industrial and commercial environments.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259193/Wall-Support-Ladder_t8fudh.jpg",
     features: ["2-6 meters length", "100-150 kg capacity", "Anti-slip steps", "Aluminum/mild steel"],
     specifications: {
       "Ladder Length": "2–6 Meters",
@@ -798,7 +843,7 @@ export const products = [
     id: 57,
     name: "Extension Ladder",
     description: "Adjustable extension ladder engineered for flexible height access and professional industrial use.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259193/Extendable-ladder_go3lsr.jpg",
     features: ["3-10 meters extended length", "120-150 kg capacity", "Rope & pulley extension", "Heavy duty aluminum"],
     specifications: {
       "Extended Length": "3–10 Meters",
@@ -818,7 +863,7 @@ export const products = [
     id: 58,
     name: "Self Supporting Ladder",
     description: "Free-standing industrial ladder designed for safe and stable elevated operations without wall support.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771259192/Self-supporting-Ladder_tiwqkf.jpg",
     features: ["1.5-3 meters height", "120-200 kg capacity", "A-Type self supporting", "Anti-skid feet & platform"],
     specifications: {
       "Height Range": "1.5–3 Meters",
@@ -998,8 +1043,8 @@ export const whyChooseUs = [
 ];
 
 export const stats = [
-  { label: "Projects Completed", value: "500+", icon: "CheckCircle2" },
-  { label: "Happy Clients", value: "300+", icon: "Users" },
+  { label: "Projects Completed", value: "150+", icon: "CheckCircle2" },
+  { label: "Happy Clients", value: "100+", icon: "Users" },
   { label: "Years Experience", value: "20+", icon: "Calendar" },
-  { label: "Products Range", value: "25+", icon: "Package" }
+  { label: "Products Range", value: "60+", icon: "Package" }
 ];

@@ -263,13 +263,13 @@ const Projects = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="animate-scale-in">
               <div className="text-4xl font-bold text-orange-500 mb-2">
-                <CountUp end="500+" />
+                <CountUp end="150+" />
               </div>
               <div className="text-gray-400">Projects Completed</div>
             </div>
             <div className="animate-scale-in stagger-1">
               <div className="text-4xl font-bold text-orange-500 mb-2">
-                <CountUp end="300+" />
+                <CountUp end="100+" />
               </div>
               <div className="text-gray-400">Happy Clients</div>
             </div>
@@ -399,7 +399,7 @@ const Projects = () => {
                 icon: "🏭"
               },
               {
-                title: "Textile Industry",
+                title: "Industries",
                 description: "Specialized fabric roll racks and garment storage systems",
                 icon: "🧵"
               },
@@ -437,73 +437,73 @@ const Projects = () => {
       </section>
 
       {/* Project Process */}
-      <section className="py-20 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Project Process
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              From concept to completion, we ensure smooth execution
-            </p>
-          </motion.div>
+     <section className="py-20 bg-white overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6 }}
+      className="text-center mb-12"
+    >
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Our Project Process
+      </h2>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        From concept to completion, we ensure smooth execution
+      </p>
+    </motion.div>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-4 gap-8"
-          >
-            {[
-              {
-                step: "01",
-                title: "Consultation",
-                description: "Understanding your warehouse needs and space constraints"
-              },
-              {
-                step: "02",
-                title: "Design & Planning",
-                description: "Custom layout design and 3D visualization of the solution"
-              },
-              {
-                step: "03",
-                title: "Manufacturing",
-                description: "In-house production with quality control at every stage"
-              },
-              {
-                step: "04",
-                title: "Installation",
-                description: "Professional installation and final quality inspection"
-              }
-            ].map((process, index) => (
-              <motion.div
-                key={index}
-                variants={slideUpBounce}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-20 h-20 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold transition-transform duration-300 hover:scale-110">
-                  {process.step}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {process.title}
-                </h3>
-                <p className="text-gray-600">
-                  {process.description}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+    <div className="grid md:grid-cols-4 gap-8">
+      {[
+        {
+          step: "01",
+          title: "Consultation",
+          description: "Understanding your warehouse needs and space constraints"
+        },
+        {
+          step: "02",
+          title: "Design & Planning",
+          description: "Custom layout design and 3D visualization of the solution"
+        },
+        {
+          step: "03",
+          title: "Manufacturing",
+          description: "In-house production with quality control at every stage"
+        },
+        {
+          step: "04",
+          title: "Installation",
+          description: "Professional installation and final quality inspection"
+        }
+      ].map((process, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ 
+            duration: 0.8, 
+            delay: index * 0.1,
+            type: "spring",
+            bounce: 0.4
+          }}
+          className="text-center"
+        >
+          <div className="w-20 h-20 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold transition-transform duration-300 hover:scale-110">
+            {process.step}
+          </div>
+          <h3 className="text-xl font-bold text-gray-900 mb-3">
+            {process.title}
+          </h3>
+          <p className="text-gray-600">
+            {process.description}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* CTA Section */}
      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white overflow-hidden">
@@ -526,7 +526,7 @@ const Projects = () => {
       transition={{ duration: 0.6, delay: 0.1 }}
       className="text-xl text-gray-300 mb-8"
     >
-      Join 500+ satisfied clients who have optimized their storage with GGRAY
+      Join 100+ satisfied clients who have optimized their storage with GGRAY
     </motion.p>
     <button
       onClick={handleWhatsAppClick}
