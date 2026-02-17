@@ -13,26 +13,107 @@ export const companyInfo = {
 
 export const products = [
   {
-    id: 1,
-    name: "Pallet Rack",
-    description: "Heavy-duty pallet racking systems designed for maximum storage efficiency and easy access to goods in warehouses.",
-    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254507/palletracks_gsppv2.jpg",
-    features: ["High load capacity", "Customizable height", "Easy installation", "Durable construction"]
+  "id": 1,
+  "name": "Pallet Rack",
+  "description": "Heavy-duty pallet racking systems engineered for maximum storage efficiency and easy access to goods in warehouses.",
+  "image": "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254507/palletracks_gsppv2.jpg",
+  "features": [
+    "High load capacity",
+    "Customizable height",
+    "Easy installation",
+    "Durable construction",
+    "Hook-in/bolt-on system with safety pins",
+    "IS-standard mild steel (MS) build"
+  ],
+  "specifications": {
+    "Unit Height": "Up to 10 meters",
+    "Unit Length": "Customisable up to 15 meters",
+    "Unit Depth": "600mm to 1500mm",
+    "Load Capacity": "500 kg to 3000 kg per level",
+    "Beam Levels": "2 to 6 (expandable)",
+    "Material": "IS-standard mild steel (MS)",
+    "Upright Frame": "2.0mm to 2.5mm thickness",
+    "Finish": "Powder-coated or Hot-dip galvanized",
+    "Safety Features": "Safety locks, frame guards, and load signage"
   },
+  "applications": [
+    "Warehousing & Logistics – For organized bulk storage and quick pallet retrieval.",
+    "Retail & Distribution – High-density storage for rapid stock replenishment.",
+    "Food & Beverage – Safe and accessible storage for perishable and non-perishable goods.",
+    "Pharmaceuticals – Precise inventory management for medical supplies.",
+    "Automobile Industry – Heavy-duty storage for spare parts and large components.",
+    "E-commerce Fulfillment – Handling high-volume SKUs with maximum accessibility.",
+    "Cold Storage – Vertical utilization in temperature-controlled freezer rooms.",
+    "Textile & Garments – Organized stacking for fabric rolls and finished apparel."
+  ]
+},
   {
-    id: 2,
-    name: "Double Deep Pallet Rack",
-    description: "High-density storage solution with double-deep configuration for maximum space utilization and increased storage capacity.",
-    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/double-deep-pallet-rack_yejpaa.jpg",
-    features: ["Space optimization", "High density storage", "Cost-effective", "Selective access"]
+  "id": 2,
+  "name": "Double Deep Pallet Rack",
+  "description": "High-density storage solution with double-deep configuration for maximum space utilization and increased storage capacity.",
+  "image": "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/double-deep-pallet-rack_yejpaa.jpg",
+  "features": [
+    "Space optimization",
+    "High density storage",
+    "Cost-effective",
+    "Selective access",
+    "Adjustable beam height (50–75mm increments)",
+    "Requires Deep reach / Pantograph forklift"
+  ],
+  "specifications": {
+    "Unit Height": "2000mm to 12000mm",
+    "Unit Length": "Up to 12 meters (Beam lengths 1350mm to 3600mm)",
+    "Pallet Depth": "Double-depth (900mm to 1200mm per rack side)",
+    "Load Capacity": "1000 kg to 3000 kg per level",
+    "Material": "IS-standard Mild Steel (MS)",
+    "Aisle Width": "2.8 to 3.2 meters",
+    "Finish": "Powder-coated or Galvanized",
+    "Accessories": "Row spacers, upright protectors, guide rails",
+    "Standards": "ISI / ANSI / EN compliant"
   },
+  "applications": [
+    "FMCG Warehouses – Ideal for high-volume storage of identical SKUs.",
+    "Food & Beverage – Efficient distribution with reduced aisle space.",
+    "Cold Storage – Maximizing vertical and horizontal density in expensive cooled environments.",
+    "Textile & Garments – Bulk storage for fabric rolls and apparel inventory.",
+    "Automotive – Storing large quantities of standardized components.",
+    "Retail & 3PL – High-density buffer storage for distribution hubs."
+  ]
+},
   {
-    id: 3,
-    name: "Slotted Angle Rack",
-    description: "Versatile and economical storage solution perfect for light to medium-duty applications with easy assembly.",
-    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/slotted-angle-rack-1_izib8y.jpg",
-    features: ["Easy assembly", "Adjustable shelves", "Cost-effective", "Modular design"]
+  "id": 3,
+  "name": "Slotted Angle Rack",
+  "description": "Versatile and economical storage solution perfect for light to medium-duty applications with easy assembly and fully adjustable shelf heights.",
+  "image": "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/slotted-angle-rack-1_izib8y.jpg",
+  "features": [
+    "Easy assembly",
+    "Adjustable shelves (50mm slot pitch)",
+    "Cost-effective",
+    "Modular design",
+    "Low maintenance",
+    "High-grade Cold Rolled Mild Steel (CRCA)"
+  ],
+  "specifications": {
+    "Unit Height": "1500 mm to 3000 mm",
+    "Unit Length": "750 mm to 1500 mm (Up to 10m in rows)",
+    "Unit Depth": "300mm to 600mm standard",
+    "Angle Thickness": "1.6mm to 2.5mm",
+    "Load Capacity": "80 kg to 200 kg per shelf",
+    "Shelf Material": "CRCA steel / Plywood / GI Sheets",
+    "Number of Shelves": "3 to 8 levels (customisable)",
+    "Finish": "Powder-coated (Grey, Blue, Black) or Galvanised",
+    "Mounting": "Freestanding or Floor anchored"
   },
+  "applications": [
+    "Warehouses & Godowns – Organized storage for small parts, tools, and inventory.",
+    "Offices – Efficient filing systems and document archive storage.",
+    "Retail & Showrooms – Versatile product display and back-stock management.",
+    "Workshops & Garages – Rugged storage for hand tools and mechanical components.",
+    "Educational Institutions – Library book stacks and administrative record keeping.",
+    "Hospitals & Clinics – Sterile storage for medical supplies and patient files.",
+    "Residential – General organization for home garages, pantries, or storerooms."
+  ]
+},
   {
     //Picture not there
     id: 4,
@@ -46,65 +127,284 @@ export const products = [
     name: "Heavy Duty Channel Rack",
     description: "Industrial-grade channel rack designed to handle extremely heavy loads with maximum durability and stability.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/heavy-duty-channel-rack-new_jec7mp.jpg",
-    features: ["Maximum load capacity", "Channel design", "Industrial strength", "Long-lasting"]
+    features: [
+      "Maximum load capacity",
+      "Channel design (1.6mm to 3mm thickness)",
+      "Industrial strength",
+      "Long-lasting",
+      "Single or Double side access"
+    ],
+    specifications: {
+      UnitHeight: "Up to 10 meters",
+      UnitLength: "Up to 15 meters",
+      UnitDepth: "600mm to 1200mm standard",
+      LoadCapacity: "500 kg to 3000 kg+ per level",
+      Material: "High-grade mild steel (IS Standard)",
+      StructureType: "Boltless or bolted channel frame",
+      Finish: "Powder-coated / Galvanised",
+      Safety: "Anti-tip anchors, safety locks, and stoppers"
+    },
+    applications: [
+      "Warehousing & Distribution – For high-density, heavy-load management.",
+      "Automobile & Engineering – Storing heavy engine blocks and metal components.",
+      "Manufacturing Units – Organizing raw materials and heavy-duty work-in-progress.",
+      "Heavy Machinery Workshops – Safe storage for industrial tools and equipment.",
+      "Retail Back-End – Bulk storage for large-format goods.",
+      "Cold Storage – Rust-resistant heavy storage for freezer facilities.",
+      "Logistics & Freight – Reliable racking for high-turnover heavy cargo."
+    ]
   },
   {
     id: 6,
     name: "Pigeon Hole Rack",
     description: "Organized storage solution with multiple compartments ideal for sorting and storing small parts and components.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254510/pigeon-hole-rack_jbtneg.jpg",
-    features: ["Multiple compartments", "Easy sorting", "Small parts storage", "Organized access"]
+    features: [
+      "Multiple compartments (9 to 100+)",
+      "Easy sorting",
+      "Small parts storage",
+      "Organized access",
+      "Knockdown bolt type or Welded assembly"
+    ],
+    specifications: {
+      UnitHeight: "1200mm to 2500mm",
+      UnitLength: "Up to 2 meters",
+      UnitDepth: "300mm to 600mm standard",
+      HoleSize: "100mm x 100mm to 400mm x 400mm",
+      LoadCapacity: "5 kg to 50 kg per compartment",
+      Material: "Mild Steel (MS) / CRCA Sheets (0.8mm to 2mm)",
+      Finish: "Powder Coated (Standard Grey, Blue, or Custom)",
+      BaseFrame: "MS Angle or Sheet frame"
+    },
+    applications: [
+      "Automobile Workshops – For meticulous sorting of nuts, bolts, and small engine parts.",
+      "Engineering Units – Organizing machine parts and precision tools.",
+      "Retail Stores – Displaying and storing product samples or small stock items.",
+      "Electronic Assembly – Sorting resistors, capacitors, and connectors.",
+      "Pharmaceuticals – Storing vials, medicine bottles, and lab samples.",
+      "Libraries & Offices – Categorized document and mail sorting."
+    ]
   },
   {
     id: 7,
     name: "Multi Tier Racking System",
     description: "Multi-level storage platform to maximize warehouse vertical space with safe access to all levels.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254510/multi-tier-racking-systems-1_cyewyk.jpg",
-    features: ["Multiple levels", "Vertical optimization", "Safe access", "Custom configuration"]
+    features: [
+      "Multiple levels (Up to 4 tiers)",
+      "Vertical optimization",
+      "Safe access (Staircases & Catwalks)",
+      "Custom configuration",
+      "Aisle locks and anti-tip mechanisms"
+    ],
+    specifications: {
+      UnitHeight: "Up to 3 meters per tier",
+      UnitLength: "Up to 10 meters",
+      UnitDepth: "300mm to 600mm standard",
+      LoadCapacity: "200 kg to 1000 kg per shelf",
+      FlooringOptions: "Steel grating, Wooden planks, Perforated metal",
+      Material: "High-Grade Mild Steel",
+      Finish: "Powder Coated / Galvanised",
+      Safety: "Railings, toe guards, and anti-slip walkways"
+    },
+    applications: [
+      "E-commerce – Handling massive SKU counts in a vertical compact footprint.",
+      "Pharmaceutical – Temperature-compliant multi-level medical storage.",
+      "Apparel & Textiles – Organized hanging or binned storage for garments.",
+      "Automotive Spares – High-density storage for small to medium spare parts.",
+      "Electronics – Secure, organized shelving for sensitive components.",
+      "Archives & Libraries – Maximizing vertical space for record keeping."
+    ]
   },
   {
     id: 8,
     name: "Industrial Rack",
     description: "Heavy-duty industrial racks engineered for demanding warehouse environments and high-volume operations.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254510/industrial-rack-1_ezjtgb.jpg",
-    features: ["Industrial grade", "High capacity", "Robust design", "Versatile usage"]
+    features: [
+      "Industrial grade",
+      "High capacity (Up to 5000 kg)",
+      "Robust design",
+      "Versatile usage",
+      "Slotted or perforated uprights"
+    ],
+    specifications: {
+      UnitHeight: "1500 mm to 10,000 mm",
+      UnitLength: "Up to 15 meters",
+      UnitDepth: "300mm to 1200mm standard",
+      LoadCapacity: "200 kg to 5000 kg per level",
+      Material: "Mild Steel (IS Standard, 2mm–3mm thick)",
+      BeamType: "Box Beam / Step Beam / Z Beam",
+      ShelfType: "Steel Panels / Wire Mesh / Wooden Board",
+      Finish: "Powder Coated / Hot-Dip Galvanised"
+    },
+    applications: [
+      "Manufacturing Plants – Heavy-duty storage for production line components.",
+      "Warehouses & Distribution – Universal racking for various palletized goods.",
+      "Automotive Workshops – Storage for tires, parts, and assembly kits.",
+      "E-commerce Fulfilment – High-volume storage for quick-pick operations.",
+      "Cold Storage Units – Durable shelving for refrigerated logistics.",
+      "Logistics & Freight – Versatile racks for fluctuating inventory types."
+    ]
   },
   {
     id: 9,
     name: "Long Span Rack",
     description: "Wide-span shelving system perfect for storing large, bulky items with extended shelf lengths.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254510/long-span-racks_gfueok.jpg",
-    features: ["Extended span", "Large item storage", "Adjustable levels", "Heavy-duty beams"]
+    features: [
+      "Extended span (1m to 3m per bay)",
+      "Large item storage",
+      "Adjustable levels (50mm / 75mm pitch)",
+      "Heavy-duty beams",
+      "Manual access operation"
+    ],
+    specifications: {
+      UnitHeight: "Up to 3 meters",
+      UnitLength: "1 to 3 meters per bay",
+      UnitDepth: "450mm to 900mm",
+      LoadCapacity: "250 kg to 800 kg per shelf",
+      Material: "High-grade Mild Steel",
+      BeamDesign: "Box beam or step beam",
+      PanelOptions: "Steel, GI, plywood, or wire mesh",
+      Finish: "Powder coating or Galvanization"
+    },
+    applications: [
+      "Warehouses & Distribution – For bulky cartons and irregularly shaped items.",
+      "Retail Back Storage – Managing seasonal overstock and large merchandise.",
+      "Workshops & Auto Garages – Organizing tools, parts, and heavy accessories.",
+      "Offices & Archives – Deep shelving for document boxes and record files.",
+      "Pharma & Medical – Bulk storage for medical devices and cartons.",
+      "FMCG – Efficient organization for fast-moving consumer products."
+    ]
   },
   {
     id: 10,
     name: "Metal Racking Storage",
     description: "Durable metal storage racking solution for organized and efficient warehouse management.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254509/metal-racking-storage_wrqvrl.png",
-    features: ["Metal construction", "Durable finish", "Corrosion resistant", "Easy maintenance"]
+    features: [
+      "Metal construction",
+      "Durable finish",
+      "Corrosion resistant",
+      "Easy maintenance",
+      "Manual or forklift assisted operation"
+    ],
+    specifications: {
+      UnitHeight: "Up to 10 meters",
+      UnitLength: "Up to 15 meters",
+      UnitDepth: "400mm to 1500mm",
+      Material: "IS-grade mild steel (MS)",
+      LoadCapacity: "500kg to 3000kg per level",
+      ShelfLevels: "2 to 6 tiers (customisable)",
+      Finish: "Powder coated or galvanised",
+      Mounting: "Floor-anchored with expansion bolts"
+    },
+    applications: [
+      "Warehouses & Distribution Centres – To store bulk inventory and supplies.",
+      "Manufacturing Units – For raw materials, tools, and finished goods.",
+      "Retail Chains & Stores – To organise goods in stockrooms.",
+      "Automotive Sector – For storing vehicle parts, tyres, and service tools.",
+      "Pharmaceuticals – Safe, organised storage of medicines and equipment.",
+      "E-commerce – To manage fast-moving inventory and logistics.",
+      "Offices & Archives – For storing files and documents in compact systems."
+    ]
   },
   {
     id: 11,
     name: "Godown Rack",
     description: "Specialized racking system designed for godown and warehouse storage with optimal space utilization.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254510/godown-rack-new_abrzwm.png",
-    features: ["Warehouse optimized", "High capacity", "Flexible design", "Easy access"]
+    features: [
+      "Warehouse optimized",
+      "High capacity",
+      "Flexible design",
+      "Easy access",
+      "Knockdown (Bolt/Nut) or Welded assembly"
+    ],
+    specifications: {
+      UnitHeight: "Up to 4 meters",
+      UnitLength: "Up to 10 meters",
+      UnitDepth: "300mm to 900mm standard",
+      LoadCapacity: "100 kg to 1500 kg per level",
+      Material: "High-grade Mild Steel (IS Standard)",
+      ShelfLevels: "2 to 6 levels (adjustable)",
+      Finish: "Powder coated / Galvanised",
+      Environment: "Indoor / Semi-Outdoor / Cold Storage Compatible"
+    },
+    applications: [
+      "Warehouses and Distribution Centres – Organized storage for bulk stock.",
+      "Manufacturing Units – For raw materials and machine parts.",
+      "Retail and Wholesale Godowns – Bulk stock management and categorization.",
+      "Cold Storage Units – Special coating for temperature-controlled zones.",
+      "Logistics and Packaging – Efficient space usage and fast item movement.",
+      "Agricultural Godowns – For storing grains, fertilizers, and supplies."
+    ]
   },
   {
     id: 12,
     name: "Cable Tray",
     description: "Industrial cable management system for organizing and supporting electrical cables safely and efficiently.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/perforated-cable-tray_aj6kbn.jpg",
-    features: ["Cable organization", "Easy installation", "Ventilation design", "Corrosion resistant"]
+    features: [
+      "Cable organization",
+      "Easy installation",
+      "Ventilation design",
+      "Corrosion resistant",
+      "Standard punched slots/holes"
+    ],
+    specifications: {
+      TrayWidth: "50 mm to 1000 mm",
+      TrayHeight: "15 mm to 150 mm",
+      TrayLength: "2.5 meters standard",
+      Material: "MS, GI, SS, or Aluminium",
+      MaterialThickness: "1.2 mm to 3.0 mm",
+      LoadCapacity: "Up to 75 kg per meter (customisable)",
+      Finish: "Powder-coated, hot-dip galvanized, or epoxy",
+      Mounting: "Ceiling, wall, or floor mounted"
+    },
+    applications: [
+      "Industrial Plants – Automotive, steel, and textile cable routing.",
+      "Power Plants – High-security cable management in substations.",
+      "Data Centres – Server rooms and IT telecom facilities.",
+      "Pharmaceutical Industries – Clean and organized cable infrastructure.",
+      "Hospitals – Safe-compliant management for healthcare infrastructure.",
+      "Commercial Buildings – Malls, airports, and railway stations."
+    ]
   },
   {
     id: 13,
     name: "Ladder Cable Tray",
     description: "Ladder-type cable tray system providing excellent ventilation and easy cable access for industrial applications.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/ladder-cable-tray-new_twk0qo.jpg",
-    features: ["Ladder design", "Superior ventilation", "Easy cable access", "Heavy cable support"]
+    features: [
+      "Ladder design",
+      "Superior ventilation",
+      "Easy cable access",
+      "Heavy cable support",
+      "Open ventilated rungs"
+    ],
+    specifications: {
+      WidthRange: "50 mm to 1000 mm",
+      DepthRange: "25 mm to 150 mm",
+      TrayLength: "2500 mm / 3000 mm standard",
+      Material: "High-Grade MS, GI, or Stainless Steel (304/316)",
+      MaterialThickness: "1.2 mm to 3.0 mm",
+      RungSpacing: "150 mm to 300 mm",
+      LoadCapacity: "Up to 100 kg/meter",
+      Finish: "Hot Dip Galvanizing / Powder Coating / Painting"
+    },
+    applications: [
+      "Power Plants and Substations – Organizing heavy-duty power cables.",
+      "Data Centers – Easy access for routing and maintenance.",
+      "Industrial Manufacturing – Electrical distribution across floors.",
+      "Commercial Offices – Routing HVAC and communication cabling.",
+      "Oil & Gas Refineries – Built to withstand harsh environments.",
+      "Metro Projects – Structured cabling in intensive infrastructure."
+    ]
   },
   {
+    //Confusion
     id: 14,
     name: "Fabric Roll Rack",
     description: "Specialized racks designed for textile and fabric roll storage with easy access and roll protection.",
@@ -112,6 +412,7 @@ export const products = [
     features: ["Roll protection", "Easy access", "Space efficient", "Damage prevention"]
   },
   {
+    //Confusion
     id: 15,
     name: "Fabric Storage Rack",
     description: "Dedicated storage solution for fabric materials with organized compartments and easy retrieval system.",
@@ -123,7 +424,31 @@ export const products = [
     name: "Heavy Duty Rack",
     description: "Extra-strength racking system built to handle the heaviest loads in demanding industrial environments.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/heavy-duty-rack-news_cssu7s.jpg",
-    features: ["Maximum load capacity", "Reinforced structure", "Industrial strength", "Long-lasting durability"]
+    features: [
+      "Maximum load capacity",
+      "Reinforced structure",
+      "Industrial strength",
+      "Long-lasting durability",
+      "Adjustable levels (2 to 8)"
+    ],
+    specifications: {
+      UnitHeight: "Up to 12 meters",
+      LoadCapacity: "500 kg to 5000+ kg per level",
+      Material: "High-grade Cold Rolled Mild Steel",
+      BeamType: "Box or Step Beam",
+      UprightThickness: "1.6 mm to 2.5 mm",
+      Finish: "Powder Coated / Galvanised",
+      DepthOptions: "400 mm to 1500 mm",
+      Accessories: "Safety Pins, Label Holders, Forklift Guards"
+    },
+    applications: [
+      "Warehousing & Distribution – Storage of palletised or boxed inventory.",
+      "Manufacturing Units – Raw materials, tools, and finished products.",
+      "Retail & Wholesale – Bulk stocking of appliances and electronics.",
+      "Automotive Industry – Storage of body parts, engines, and tyres.",
+      "Cold Storage – Suitable for temperature-controlled environments.",
+      "Defence & Aerospace – High-precision storage for sensitive equipment."
+    ]
   },
   {
     //Pic not there
@@ -138,14 +463,63 @@ export const products = [
     name: "Cantilever Rack",
     description: "Ideal for storing long, bulky items like pipes, timber, and steel bars with easy loading and unloading.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254507/cantilever-rack-1_nsckg4.jpg",
-    features: ["Long item storage", "Quick access", "Adjustable arms", "Heavy-duty design"]
+    features: [
+      "Long item storage",
+      "Quick access",
+      "Adjustable arms",
+      "Heavy-duty design",
+      "Single or Double-sided"
+    ],
+    specifications: {
+      RackHeight: "Up to 6 meters",
+      ArmLength: "600 mm to 1500 mm",
+      ArmLoadCapacity: "Up to 2000 kg",
+      Material: "High-strength Mild Steel (IS standard)",
+      Finish: "Powder coated / Galvanised",
+      Bracing: "Horizontal and diagonal for rigidity",
+      Installation: "Bolt-down base plate to floor",
+      Usage: "Indoor / Outdoor"
+    },
+    applications: [
+      "Steel & Metal Industries – Pipes, bars, rods, and angles.",
+      "Timber & Lumber Yards – Wooden planks, beams, and logs.",
+      "Furniture Manufacturing – Sofas, frames, and mattresses.",
+      "Plastics & PVC – Rolls, tubes, and conduits.",
+      "Textile & Carpet – Large rolls of fabric.",
+      "Construction Sites – Scaffoldings, formwork, and rods."
+    ]
   },
+  
   {
     id: 19,
     name: "Spare Parts Rack",
     description: "Organized storage system for spare parts and components with easy identification and quick access.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254507/spare-parts-storage-rack_tv5fym.jpg",
-    features: ["Parts organization", "Quick identification", "Inventory control", "Easy access"]
+    features: [
+      "Parts organization",
+      "Quick identification",
+      "Inventory control",
+      "Easy access",
+      "Manual access"
+    ],
+    specifications: {
+      UnitHeight: "Up to 3 meters",
+      UnitLength: "Up to 10 meters",
+      UnitDepth: "300mm to 900mm standard",
+      LoadCapacity: "100 kg – 1000 kg per level",
+      Material: "IS-standard Mild Steel (anti-corrosion)",
+      ShelfType: "Perforated or solid",
+      Finish: "Epoxy powder coating / hot-dip galvanisation",
+      Mobility: "Static or mobile options"
+    },
+    applications: [
+      "Automobile Workshops – Service station parts management.",
+      "Manufacturing Plants – Maintenance department (MRO) storage.",
+      "Engineering Stores – Machine parts and small tools.",
+      "Retail Hardware – Organizing inventory and stock.",
+      "Aviation & Rail – Sector-specific small part storage.",
+      "Electrical & Electronics – Components and circuit parts."
+    ]
   },
   {
     //Pic not there
@@ -160,28 +534,124 @@ export const products = [
     name: "Drawer Rack",
     description: "Multi-drawer storage system for small parts and tools with organized compartments and smooth operation.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254507/drawer-rack_rldroc.jpg",
-    features: ["Multiple drawers", "Smooth operation", "Small parts storage", "Easy access"]
+    features: [
+      "Multiple drawers",
+      "Smooth operation",
+      "Small parts storage",
+      "Easy access",
+      "Anti-tip design"
+    ],
+    specifications: {
+      UnitHeight: "3 to 6 feet",
+      UnitWidth: "Up to 4 feet",
+      BinMaterial: "Virgin grade polypropylene plastic",
+      BinLoadCapacity: "2 to 20 kg per bin",
+      TotalLoadCapacity: "Up to 500 kg per rack",
+      FrameMaterial: "Heavy-duty mild steel",
+      Finish: "Anti-rust powder coating",
+      Locking: "Optional central locking"
+    },
+    applications: [
+      "Automobile workshops – Fasteners and small engine parts.",
+      "Electronic stores – Component and kit organization.",
+      "Pharmaceutical & Healthcare – Vials, medicines, and surgical supplies.",
+      "Research Labs – Sample and chemical management.",
+      "Hardware Rooms – Tools and assembly parts."
+    ]
   },
   {
     id: 22,
     name: "Mobile Compactor",
     description: "Space-saving mobile compactor systems (push-pull/steering type) for efficient document and file storage.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254507/mobile-campactor-news_d4rdxw.jpg",
-    features: ["50% space saving", "Easy movement", "Secure storage", "Smooth operation"]
+    features: [
+      "50% space saving",
+      "Easy movement",
+      "Secure storage",
+      "Smooth operation",
+      "Anti-toppling design"
+    ],
+    specifications: {
+      UnitHeight: "Up to 3 meters",
+      UnitLength: "Up to 10 meters",
+      UnitDepth: "300mm to 1000mm standard",
+      DriveType: "Hand crank / Push-pull / Chain-driven",
+      LoadCapacity: "80 kg to 300 kg per shelf",
+      Finish: "Powder coated (40–70 microns)",
+      RailType: "MS flat rail or 'T' rail",
+      Locking: "Central lock or pad lock facility"
+    },
+    applications: [
+      "Offices – Storing files, documents, and archives.",
+      "Hospitals & Labs – Medical records and sample files.",
+      "Banks – Secure storage of confidential records.",
+      "Libraries – Books, journals, and student records.",
+      "Government – Record keeping and legal documents.",
+      "Pharmaceuticals – Packaging stock and raw materials."
+    ]
   },
+  
   {
     id: 23,
     name: "Steel Storage Rack",
     description: "Robust steel racking solution for general storage applications with excellent durability and strength.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/steel-storage-rack_x4juea.jpg",
-    features: ["Steel construction", "High durability", "Corrosion resistant", "Versatile use"]
+    features: [
+      "Steel construction",
+      "High durability",
+      "Corrosion resistant",
+      "Versatile use",
+      "Manual or MHE-Compatible"
+    ],
+    specifications: {
+      UnitHeight: "Up to 3 meters",
+      UnitLength: "Up to 10 meters",
+      UnitDepth: "300mm to 600mm standard",
+      Material: "Mild Steel, IS 2062 grade",
+      LoadCapacity: "200–1000 kg per level",
+      ShelfType: "Solid, perforated, or wire mesh",
+      Finish: "Powder coating or hot-dip galvanised",
+      CorrosionResistance: "Yes, anti-rust treated"
+    },
+    applications: [
+      "Warehouses – For palletised and non-palletised goods.",
+      "Manufacturing Units – Raw materials, parts, and tools.",
+      "Retail & Supermarkets – Display and inventory management.",
+      "Automobile Workshops – Component and spare part storage.",
+      "Libraries & Offices – Document and book storage.",
+      "Educational Institutions – Lab equipment and supplies."
+    ]
   },
   {
     id: 24,
     name: "Stainless Steel Rack",
     description: "Premium stainless steel racking system ideal for hygienic environments and corrosive conditions.",
     image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254506/storage-stainless-steel-racks_z58ras.png",
-    features: ["Stainless steel", "Corrosion proof", "Hygienic design", "Easy cleaning"]
+    features: [
+      "Stainless steel",
+      "Corrosion proof",
+      "Hygienic design",
+      "Easy cleaning",
+      "Manual (hand-loaded)"
+    ],
+    specifications: {
+      UnitHeight: "1500 mm to 2500 mm",
+      UnitLength: "Up to 6 feet per rack",
+      UnitDepth: "300mm to 600mm standard",
+      MaterialGrade: "SS 202, SS 304, SS 316",
+      ShelfLoadCapacity: "100–300 kg",
+      Finish: "Brushed / Matte / Glossy",
+      ShelfType: "Plain, slotted, perforated, or mesh",
+      BaseType: "Fixed base or caster wheels"
+    },
+    applications: [
+      "Food & Beverage – Dry storage and cooling rooms.",
+      "Pharmaceutical Industry – Sterile products and lab equipment.",
+      "Hospitals & Clinics – Surgical supplies and clean rooms.",
+      "Commercial Kitchens – Utensils, trays, and ingredients.",
+      "Hotels – Pantry and laundry room storage.",
+      "Laboratories – Chemical storage and sample management."
+    ]
   },
   { 
   "id": 25,
