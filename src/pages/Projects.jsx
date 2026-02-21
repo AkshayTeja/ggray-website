@@ -263,13 +263,13 @@ const Projects = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="animate-scale-in">
               <div className="text-4xl font-bold text-orange-500 mb-2">
-                <CountUp end="150+" />
+                <CountUp end="1500+" />
               </div>
               <div className="text-gray-400">Projects Completed</div>
             </div>
             <div className="animate-scale-in stagger-1">
               <div className="text-4xl font-bold text-orange-500 mb-2">
-                <CountUp end="100+" />
+                <CountUp end="1000+" />
               </div>
               <div className="text-gray-400">Happy Clients</div>
             </div>
@@ -399,7 +399,7 @@ const Projects = () => {
                 icon: "🏭"
               },
               {
-                title: "Industries",
+                title: "Textile Industries",
                 description: "Specialized fabric roll racks and garment storage systems",
                 icon: "🧵"
               },
@@ -412,6 +412,21 @@ const Projects = () => {
                 title: "Retail Warehouses",
                 description: "Efficient storage and picking systems for retail distribution",
                 icon: "🏪"
+              },
+              {
+                title: "Automobile Industry",
+                description: "Heavy-duty storage systems for automotive components, spare parts, and assembly line inventory",
+                icon: "🚗"
+              },
+              {
+                title: "Construction Sites",
+                description: "Durable storage racks for tools, building materials, and on-site equipment management",
+                icon: "🏗️"
+              },
+              {
+                title: "Industrial Gas Storage & Handling",
+                description: "Safe cylinder racks and heavy-duty trolleys designed for secure storage and smooth transportation of oxygen and industrial gas cylinders within facilities.",
+                icon: "🏭"
               }
             ].map((industry, index) => (
               <motion.div
@@ -475,6 +490,11 @@ const Projects = () => {
           step: "04",
           title: "Installation",
           description: "Professional installation and final quality inspection"
+        },
+        {
+          step: "05",
+          title: "Customer Satisfaction",
+          description: "Post-installation support, performance checks, and long-term service commitment to ensure complete client satisfaction."
         }
       ].map((process, index) => (
         <motion.div

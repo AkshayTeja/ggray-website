@@ -210,7 +210,7 @@ const Contact = () => {
                     <MapPin className="text-orange-600" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Our Location</h3>
+                    <h3 className="font-semibold text-gray-900">Our Corporate Office Location</h3>
                     <p className="text-gray-600">{companyInfo.address}</p>
                   </div>
                 </motion.div>

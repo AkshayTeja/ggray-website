@@ -6,7 +6,7 @@ export const companyInfo = {
   email: "info@grayrack.com",
   phone: "+91 97079-18272",
   whatsapp: "919707918272",
-  address: "Guwahati, Assam, India",
+  address: "H-20, Janapath Ln, South Sarania, Ulubari, Guwahati, Assam 781007, India",
   workingHours: "Monday - Saturday | 09:00 AM - 6:00 PM",
   description: "We deliver sustainable solutions and services to various industries within India."
 };
@@ -1513,8 +1513,8 @@ export const whyChooseUs = [
 ];
 
 export const stats = [
-  { label: "Projects Completed", value: "150+", icon: "CheckCircle2" },
-  { label: "Happy Clients", value: "100+", icon: "Users" },
+  { label: "Projects Completed", value: "1500+", icon: "CheckCircle2" },
+  { label: "Satisfied Clients", value: "1000+", icon: "Users" },
   { label: "Years Experience", value: "20+", icon: "Calendar" },
   { label: "Products Range", value: "60+", icon: "Package" }
 ];
