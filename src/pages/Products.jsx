@@ -425,11 +425,11 @@ const Products = () => {
               className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative h-80">
+              <div className="relative w-full aspect-video bg-gray-100">
                 <img
                   src={selectedProduct.image}
                   alt={selectedProduct.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
                 <button
                   onClick={() => setSelectedProduct(null)}
@@ -464,6 +464,20 @@ const Products = () => {
                     </div>
                   ))}
                 </div>
+
+                {/* How It Works */}
+                {selectedProduct.howItWorks && (
+                  <>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                      How It Works
+                    </h3>
+                    <div className="bg-blue-50 rounded-lg p-6 mb-8">
+                      <p className="text-gray-700 leading-relaxed">
+                        {selectedProduct.howItWorks}
+                      </p>
+                    </div>
+                  </>
+                )}
 
                 {/* Specifications - Only for Trolleys (ID >= 27) */}
                 {selectedProduct.specifications && (

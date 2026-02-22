@@ -115,13 +115,39 @@ export const products = [
   ]
 },
   {
-    //Picture not there
-    id: 4,
-    name: "Sectional Panel Rack",
-    description: "Robust sectional panel racking system with superior strength and flexibility for diverse storage needs.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
-    features: ["Modular panels", "Easy expansion", "Strong construction", "Versatile storage"]
+  id: 4,
+  name: "Sectional Panel Rack",
+  description: "A versatile, frame-and-beam storage system designed for medium-duty loads, offering high visibility and flexible height adjustment for manual stock management.",
+  image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771737361/sectional_panel_rack_ulxlcn.jpg",
+  features: [
+    "Modular frame and beam construction",
+    "Fully adjustable shelf levels",
+    "Versatile decking options",
+    "High-visibility design ",
+    "Durable finish for longevity"
+  ],
+  specifications: {
+    UnitHeight: "Up to 3000 mm",
+    BayLength: "1200 mm to 2500 mm",
+    UnitDepth: "400mm to 900mm standard",
+    LoadCapacity: "200 kg to 1000 kg per level",
+    Material: "High-strength CRCA Mild Steel",
+    ShelfLevels: "2 to 6 (adjustable)",
+    Finish: "Powder coated / epoxy painted / galvanised",
+    SafetyAccessories: "Load labels, locking pins, anti-skid base"
   },
+  howItWorks: "Sectional Panel Racks operate on a frame and beam principle where upright frames are placed vertically and horizontal beams are locked between them to form levels. Decking materials are placed across these beams to hold goods securely. Designed for manual access, the system allows workers to load or retrieve items without heavy machinery. The modular nature of the racks allows for easy adjustment of shelf heights to accommodate changing storage requirements and inventory types.",
+  applications: [
+    "Warehouses and distribution centers for organized manual picking.",
+    "Retail stockrooms for managing varied inventory sizes.",
+    "Automotive parts storage for components and accessories.",
+    "Electrical components and hardware storage for small to medium parts.",
+    "Pharmaceutical and medical supplies requiring clean, accessible storage.",
+    "Manufacturing units for holding work-in-progress or raw materials.",
+    "Libraries and archive storage for document and record management.",
+    "Grocery and food packaging units for dry, organized stock."
+  ]
+},
   {
     id: 5,
     name: "Heavy Duty Channel Rack",
@@ -404,21 +430,69 @@ export const products = [
     ]
   },
   {
-    //Confusion
-    id: 14,
-    name: "Fabric Roll Rack",
-    description: "Specialized racks designed for textile and fabric roll storage with easy access and roll protection.",
-    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/fabric-roll-rack_osyjoj.jpg",
-    features: ["Roll protection", "Easy access", "Space efficient", "Damage prevention"]
+  id: 14,
+  name: "Fabric Roll Rack",
+  description: "A specialized storage solution designed to protect delicate fabric rolls from damage while maximizing vertical space through horizontal or vertical loading configurations.",
+  image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771737360/fabric-roll-rack_tvustc.jpg",
+  features: [
+    "Flexible storage",
+    "High-grade Mild Steel construction",
+    "Supports heavy-duty loads",
+    "Modular assembly options",
+    "Optional casters for mobile storage"
+  ],
+  specifications: {
+    UnitHeight: "Up to 3000 mm",
+    RackLength: "Customised up to 5000 mm",
+    UnitDepth: "600mm to 1200mm standard",
+    LoadCapacity: "Up to 1000 kg per level",
+    Material: "IS Standard Mild Steel",
+    RollDiameter: "200 mm to 500 mm",
+    Finish: "Powder Coated / Galvanized",
+    Mobility: "Industrial wheels with brakes available"
   },
+  howItWorks: "Fabric rolls are secured onto steel rods or shelves mounted on robust vertical frames. In horizontal systems, fabric rolls rest on support bars that can be fitted with slide-out arms for easier access via trolleys or manual handling. In vertical configurations, rolls are stood upright and separated by dividers to maintain organization and prevent wrinkles. Both methods ensure the fabric remains protected from dust and physical deformation.",
+  applications: [
+    "Textile manufacturing units for large-scale raw material organization.",
+    "Garment export houses for efficient inventory management of various fabric types.",
+    "Fabric showrooms and retail stores to maintain pristine display and quick retrieval.",
+    "Warehouses and storage facilities to maximize floor space and roll protection.",
+    "Furniture and upholstery workshops for storing high-volume upholstery fabrics.",
+    "Fashion and design institutes for organizing student material stocks."
+  ]
+},
   {
-    //Confusion
-    id: 15,
-    name: "Fabric Storage Rack",
-    description: "Dedicated storage solution for fabric materials with organized compartments and easy retrieval system.",
-    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771254508/fabric-storage-rack-new_bsdpjf.jpg",
-    features: ["Fabric protection", "Organized storage", "Easy retrieval", "Material safety"]
+  id: 15,
+  name: "Fabric Storage Rack",
+  description: "A professional-grade storage system engineered to keep fabric rolls and bundles organized, clean, and wrinkle-free while optimizing vertical floor space.",
+  image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771737360/fabric-storage-rack-new_aarqos.jpg",
+  features: [
+    "Versatile configuration options",
+    "High-strength mild steel construction",
+    "Adaptable design ",
+    "Adjustable shelving levels",
+    "Compatible with lifting equipment"
+  ],
+  specifications: {
+    UnitHeight: "2000mm to 4000mm",
+    RackLength: "1500mm to 4000mm modules",
+    UnitDepth: "500mm to 1000mm",
+    LoadCapacity: "150 kg – 1000 kg per level",
+    Material: "High-strength mild steel (IS-grade)",
+    ShelfType: "Beam-supported, cantilever arms, or flat trays",
+    Finish: "Powder coated / Galvanised / Moisture-resistant",
+    MountingType: "Anchored to floor for stability"
   },
+  howItWorks: "Fabric rolls are placed on heavy-duty shelves or cantilever arms designed to prevent sagging and wrinkles. The racks can be configured as single-sided for wall placement or double-sided for central aisles. In operations using hydraulic stackers or forklifts, the structure is reinforced for mechanical handling, while manual-access versions are set at ergonomic heights. This system streamlines picking and dispatch by ensuring rolls are stored in a way that minimizes physical strain and potential material damage.",
+  applications: [
+    "Textile mills and manufacturing units for large-volume material staging.",
+    "Garment factories and tailoring hubs for organized access to patterns and rolls.",
+    "Fabric wholesalers and retail showrooms for professional inventory display.",
+    "Export houses and fashion design studios for high-value textile protection.",
+    "Upholstery and home furnishing storage for specialized fabric types.",
+    "Warehouses dealing in roll goods such as rubber, vinyl, and nonwovens."
+  ]
+},
   {
     id: 16,
     name: "Heavy Duty Rack",
@@ -451,13 +525,38 @@ export const products = [
     ]
   },
   {
-    //Pic not there
-    id: 17,
-    name: "Drum Storage Rack",
-    description: "Specialized rack designed for safe and efficient storage of drums and cylindrical containers.",
-    image: "https://images.unsplash.com/photo-1661156965965-ef5e6f68a51b",
-    features: ["Drum specific design", "Safe storage", "Easy loading", "Spill containment"]
+  id: 24,
+  name: "Drum Storage Rack",
+  description: "A specialized heavy-duty racking system designed to store cylindrical drums securely in horizontal cradles or vertical positions, optimizing space and improving safety for liquid handling.",
+  image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771737360/drum-storage-rack-new_oc40cx.jpg",
+  features: [
+    "Versatile configurations",
+    "Heavy-duty construction",
+    "Engineered to accommodate drums",
+    "Optional spill containment trays",
+    "Compatible with lifts and pallet trucks"
+  ],
+  specifications: {
+    UnitHeight: "Up to 2500 mm",
+    UnitLength: "Up to 3000 mm",
+    UnitDepth: "600 mm to 1200 mm",
+    LoadCapacity: "300 kg – 1000 kg per level",
+    Material: "Heavy-duty Mild Steel (MS)",
+    RackLevels: "1 to 4 tiers",
+    Finish: "Powder coated / Hot-dip galvanized",
+    DrumCompatibility: "60L, 100L, 200L (steel or plastic)"
   },
+  howItWorks: "Drum Storage Racks support the cylindrical geometry of barrels using secure cradles or V-shaped supports. In horizontal configurations, these cradles prevent rolling and facilitate direct dispensing from the rack. The system allows for either manual operation or mechanical retrieval using specialized drum lifters and forklifts. For environmental safety, units can be equipped with integrated drip trays to manage spills, ensuring the storage area remains clean and compliant with industrial safety regulations.",
+  applications: [
+    "Chemical Manufacturing for the organized storage of hazardous materials.",
+    "Oil & Lubricant Storage for high-volume inventory management.",
+    "Paint & Coating Industry for secure containment of liquid bases.",
+    "Food and Beverage Processing Units for non-toxic raw material storage.",
+    "Pharmaceutical Manufacturing for controlled and clean storage environments.",
+    "Waste Management and Water Treatment Plants for chemical processing containers.",
+    "Warehousing and Logistics for efficient handling of bulk liquid inventory."
+  ]
+},
   {
     id: 18,
     name: "Cantilever Rack",
@@ -522,13 +621,37 @@ export const products = [
     ]
   },
   {
-    //Pic not there
-    id: 20,
-    name: "Die Mould Rack",
-    description: "Heavy-duty rack system specifically designed for storing dies and moulds with safe handling features.",
-    image: "https://images.unsplash.com/photo-1684695749267-233af13276d0",
-    features: ["Die storage", "Heavy load capacity", "Safe handling", "Damage prevention"]
+  id: 20,
+  name: "Die Mould Rack",
+  description: "Heavy-duty rack system specifically designed for storing dies and moulds with safe handling features.",
+  image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1771737360/die_mould_rack_gv4z8n.jpg",
+  features: [
+    "Heavy-duty load capacity",
+    "Specialized sliding shelves",
+    "Modular design",
+    "Integrated locking systems",
+    "Compatible with different loading"
+  ],
+  specifications: {
+    UnitHeight: "1800mm to 3000mm (customisable)",
+    ShelfWidth: "900mm to 2000mm",
+    ShelfDepth: "600mm to 1000mm",
+    LoadCapacity: "500 kg to 2000 kg per shelf",
+    Material: "High-grade Mild Steel (IS:1079/2062 standards)",
+    ShelfType: "Sliding / Pull-out / Fixed",
+    Finish: "Powder Coated / Galvanised",
+    OperationMechanism: "Manual Slide or Roller Bearings"
   },
+  howItWorks: "Die Mould Racks function by providing reinforced, multi-level storage where each unit is stored securely. The system utilizes movable shelves that slide out on roller tracks, allowing operators to easily retrieve or place heavy dies using manual effort or overhead cranes. For maximum safety, locking mechanisms ensure each tray stays in place, while the modular design allows the racks to be expanded or adapted to fit existing industrial spaces without manual strain.",
+  applications: [
+    "Automotive Industry – For storing large moulds, stamping dies, and assembly jigs.",
+    "Plastic Injection Moulding Units – To organise injection moulding dies.",
+    "Tool Rooms – For easy classification and access of various tools and dies.",
+    "Sheet Metal Industries – Storage of press dies and fixtures.",
+    "Foundries and Forging Units – Secure storage of heavy patterns and tools.",
+    "Electronics & Appliance Manufacturers – For storing precision moulds."
+  ]
+},
   {
     id: 21,
     name: "Drawer Rack",
