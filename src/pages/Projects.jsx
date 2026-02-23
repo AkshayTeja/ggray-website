@@ -1,10 +1,10 @@
-import React from 'react';
-import { Calendar, MapPin, Building } from 'lucide-react';
-import { Card, CardContent } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-import { projects } from '../utils/mockData';
-import { motion } from 'framer-motion';
-import { useState, useRef, useEffect } from 'react';
+import React from "react";
+import { Calendar, MapPin, Building } from "lucide-react";
+import { Card, CardContent } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { projects } from "../utils/mockData";
+import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 
 const Projects = () => {
   // Animation variants
@@ -44,27 +44,27 @@ const Projects = () => {
 
   const cardItem = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
-    show: { 
-      opacity: 1, 
-      y: 0, 
+    show: {
+      opacity: 1,
+      y: 0,
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     },
   };
 
   const slideUpBounce = {
     hidden: { opacity: 0, y: 50 },
-    show: { 
-      opacity: 1, 
+    show: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
         bounce: 0.4,
-        duration: 0.8
-      }
+        duration: 0.8,
+      },
     },
   };
 
@@ -78,7 +78,7 @@ const Projects = () => {
     const hasPlus = valueStr.includes("+");
     const hasPercent = valueStr.includes("%");
     const hasSuffix = valueStr.includes("M+");
-    
+
     let target;
     if (hasSuffix) {
       target = parseFloat(valueStr.replace("M+", ""));
@@ -94,7 +94,7 @@ const Projects = () => {
             observer.disconnect();
           }
         },
-        { threshold: 0.4 }
+        { threshold: 0.4 },
       );
 
       if (ref.current) observer.observe(ref.current);
@@ -133,8 +133,11 @@ const Projects = () => {
   }
 
   const handleWhatsAppClick = () => {
-      window.open(`https://wa.me/${companyInfo.whatsapp}?text=Hello, I would like to start my project.`, '_blank');
-    };
+    window.open(
+      `https://wa.me/${companyInfo.whatsapp}?text=Hello, I would like to start my project.`,
+      "_blank",
+    );
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -251,7 +254,8 @@ const Projects = () => {
               Our Projects
             </h1>
             <p className="text-xl text-gray-200 animate-slide-in-left stagger-1">
-              Showcasing our successful warehouse transformations across Northeast India
+              Showcasing our successful warehouse transformations across
+              Northeast India
             </p>
           </div>
         </div>
@@ -304,7 +308,8 @@ const Projects = () => {
               Featured Projects
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Explore how we've helped businesses across Northeast India optimize their warehouse space
+              Explore how we've helped businesses across Northeast India
+              optimize their warehouse space
             </p>
           </motion.div>
 
@@ -385,49 +390,58 @@ const Projects = () => {
             {[
               {
                 title: "FMCG Distribution",
-                description: "High-capacity pallet racking for fast-moving consumer goods warehouses",
-                icon: "📦"
+                description:
+                  "High-capacity pallet racking for fast-moving consumer goods warehouses",
+                icon: "📦",
               },
               {
                 title: "Pharmaceutical Storage",
-                description: "Temperature-controlled and organized storage solutions for pharma products",
-                icon: "💊"
+                description:
+                  "Temperature-controlled and organized storage solutions for pharma products",
+                icon: "💊",
               },
               {
                 title: "Manufacturing Units",
-                description: "Heavy-duty racks for raw materials and finished goods storage",
-                icon: "🏭"
+                description:
+                  "Heavy-duty racks for raw materials and finished goods storage",
+                icon: "🏭",
               },
               {
                 title: "Textile Industries",
-                description: "Specialized fabric roll racks and garment storage systems",
-                icon: "🧵"
+                description:
+                  "Specialized fabric roll racks and garment storage systems",
+                icon: "🧵",
               },
               {
                 title: "Logistics Centers",
-                description: "Comprehensive warehouse solutions for 3PL and distribution hubs",
-                icon: "🚚"
+                description:
+                  "Comprehensive warehouse solutions for 3PL and distribution hubs",
+                icon: "🚚",
               },
               {
                 title: "Retail Warehouses",
-                description: "Efficient storage and picking systems for retail distribution",
-                icon: "🏪"
+                description:
+                  "Efficient storage and picking systems for retail distribution",
+                icon: "🏪",
               },
               {
                 title: "Automobile Industry",
-                description: "Heavy-duty storage systems for automotive components, spare parts, and assembly line inventory",
-                icon: "🚗"
+                description:
+                  "Heavy-duty storage systems for automotive components, spare parts, and assembly line inventory",
+                icon: "🚗",
               },
               {
                 title: "Construction Sites",
-                description: "Durable storage racks for tools, building materials, and on-site equipment management",
-                icon: "🏗️"
+                description:
+                  "Durable storage racks for tools, building materials, and on-site equipment management",
+                icon: "🏗️",
               },
               {
                 title: "Industrial Gas Storage & Handling",
-                description: "Safe cylinder racks and heavy-duty trolleys designed for secure storage and smooth transportation of oxygen and industrial gas cylinders within facilities.",
-                icon: "🏭"
-              }
+                description:
+                  "Safe cylinder racks and heavy-duty trolleys designed for secure storage and smooth transportation of oxygen and industrial gas cylinders within facilities.",
+                icon: "🏭",
+              },
             ].map((industry, index) => (
               <motion.div
                 key={index}
@@ -452,110 +466,143 @@ const Projects = () => {
       </section>
 
       {/* Project Process */}
-     <section className="py-20 bg-white overflow-hidden">
-  <div className="max-w-7xl mx-auto px-4">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6 }}
-      className="text-center mb-12"
-    >
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Our Project Process
-      </h2>
-      <p className="text-gray-600 max-w-2xl mx-auto">
-        From concept to completion, we ensure smooth execution
-      </p>
-    </motion.div>
+      <section className="py-20 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Project Process
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              From concept to completion, we ensure smooth execution
+            </p>
+          </motion.div>
 
-    <div className="grid md:grid-cols-4 gap-8">
-      {[
-        {
-          step: "01",
-          title: "Consultation",
-          description: "Understanding your warehouse needs and space constraints"
-        },
-        {
-          step: "02",
-          title: "Design & Planning",
-          description: "Custom layout design and 3D visualization of the solution"
-        },
-        {
-          step: "03",
-          title: "Manufacturing",
-          description: "In-house production with quality control at every stage"
-        },
-        {
-          step: "04",
-          title: "Installation",
-          description: "Professional installation and final quality inspection"
-        },
-        {
-          step: "05",
-          title: "Customer Satisfaction",
-          description: "Post-installation support, performance checks, and long-term service commitment to ensure complete client satisfaction."
-        }
-      ].map((process, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ 
-            duration: 0.8, 
-            delay: index * 0.1,
-            type: "spring",
-            bounce: 0.4
-          }}
-          className="text-center"
-        >
-          <div className="w-20 h-20 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold transition-transform duration-300 hover:scale-110">
-            {process.step}
+          {/* Row 1: Steps 1–3 */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                step: "01",
+                title: "Consultation",
+                description:
+                  "Understanding your warehouse needs and space constraints",
+              },
+              {
+                step: "02",
+                title: "Design & Planning",
+                description:
+                  "Custom layout design and 3D visualization of the solution",
+              },
+              {
+                step: "03",
+                title: "Manufacturing",
+                description:
+                  "In-house production with quality control at every stage",
+              },
+            ].map((process, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.1,
+                  type: "spring",
+                  bounce: 0.4,
+                }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold transition-transform duration-300 hover:scale-110">
+                  {process.step}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {process.title}
+                </h3>
+                <p className="text-gray-600">{process.description}</p>
+              </motion.div>
+            ))}
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
-            {process.title}
-          </h3>
-          <p className="text-gray-600">
-            {process.description}
-          </p>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
+
+          {/* Row 2: Steps 4–5 centered */}
+          <div className="flex justify-center gap-8 md:gap-24">
+            {[
+              {
+                step: "04",
+                title: "Installation",
+                description:
+                  "Professional installation and final quality inspection",
+              },
+              {
+                step: "05",
+                title: "Customer Satisfaction",
+                description:
+                  "Post-installation support, performance checks, and long-term service commitment to ensure complete client satisfaction.",
+              },
+            ].map((process, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: 0.8,
+                  delay: (index + 3) * 0.1,
+                  type: "spring",
+                  bounce: 0.4,
+                }}
+                className="text-center max-w-xs"
+              >
+                <div className="w-20 h-20 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold transition-transform duration-300 hover:scale-110">
+                  {process.step}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {process.title}
+                </h3>
+                <p className="text-gray-600">{process.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-     <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white overflow-hidden">
-  <div className="max-w-4xl mx-auto px-4 text-center">
-    <motion.h2
-      variants={scaleIn}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className="text-3xl md:text-4xl font-bold mb-6"
-    >
-      Ready to Transform Your Warehouse?
-    </motion.h2>
-    <motion.p
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: 0.1 }}
-      className="text-xl text-gray-300 mb-8"
-    >
-      Join 100+ satisfied clients who have optimized their storage with GGRAY
-    </motion.p>
-    <button
-      onClick={handleWhatsAppClick}
-      className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-md transition-all hover:shadow-2xl font-semibold inline-flex items-center justify-center gap-2 group"
-    >
-      Start your project today
-    </button>
-  </div>
-</section>
+      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <motion.h2
+            variants={scaleIn}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold mb-6"
+          >
+            Ready to Transform Your Warehouse?
+          </motion.h2>
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-xl text-gray-300 mb-8"
+          >
+            Join 100+ satisfied clients who have optimized their storage with
+            GGRAY
+          </motion.p>
+          <button
+            onClick={handleWhatsAppClick}
+            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-md transition-all hover:shadow-2xl font-semibold inline-flex items-center justify-center gap-2 group"
+          >
+            Start your project today
+          </button>
+        </div>
+      </section>
     </div>
   );
 };
