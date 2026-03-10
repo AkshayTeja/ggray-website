@@ -12,6 +12,7 @@ import {
   services,
   stats,
 } from "../utils/mockData";
+import { Leaf, Award, Shield, Settings, Clock, DollarSign } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
@@ -430,29 +431,56 @@ const Home = () => {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {benefits.map((benefit) => (
-              <motion.div
-                key={benefit.id}
-                variants={cardItem}
-                transition={{ duration: 0.6 }}
-              >
-                <Card className="border-2 border-gray-100 hover:border-orange-500 hover:shadow-xl transition-all">
-                  <CardContent className="p-6">
-                    <div className="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                      <CheckCircle2 className="text-orange-600" size={28} />
+            {benefits.map((benefit) => {
+              const iconMap = {
+                Leaf: Leaf,
+                Award: Award,
+                Shield: Shield,
+                Settings: Settings,
+                Clock: Clock,
+                DollarSign: DollarSign,
+              };
+              const IconComponent = iconMap[benefit.icon];
+
+              return (
+                <motion.div
+                  key={benefit.id}
+                  variants={cardItem}
+                  transition={{ duration: 0.6 }}
+                >
+                  <Card className="border-2 border-gray-100 hover:border-orange-500 hover:shadow-xl transition-all overflow-hidden group">
+                    {/* Background Image */}
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={benefit.image}
+                        alt={benefit.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gray-900/40"></div>
                     </div>
 
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      {benefit.title}
-                    </h3>
+                    <CardContent className="p-6">
+                      <div className="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        {IconComponent && (
+                          <IconComponent
+                            className="text-orange-600"
+                            size={28}
+                          />
+                        )}
+                      </div>
 
-                    <p className="text-gray-600 leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                        {benefit.title}
+                      </h3>
+
+                      <p className="text-gray-600 leading-relaxed">
+                        {benefit.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </section>
@@ -578,27 +606,35 @@ const Home = () => {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
-            {services.map((service) => (
-              <motion.div
-                key={service.id}
-                variants={item}
-                transition={{ duration: 0.6 }}
-                className="text-center"
-              >
-                <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110">
-                  <CheckCircle2 size={40} />
-                </div>
+            {services.map((service) => {
+              const emojiMap = {
+                1: "💡",
+                2: "🏭",
+                3: "🔧",
+                4: "🎧",
+              };
 
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+              return (
+                <motion.div
+                  key={service.id}
+                  variants={item}
+                  transition={{ duration: 0.6 }}
+                  className="text-center"
+                >
+                  <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110">
+                    <span className="text-3xl">{emojiMap[service.id]}</span>
+                  </div>
 
-                <p className="text-gray-400">{service.description}</p>
-              </motion.div>
-            ))}
+                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+
+                  <p className="text-gray-400">{service.description}</p>
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </section>
 
-      {/* Testimonials */}
       {/* Testimonials Section */}
       <section className="py-20 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">

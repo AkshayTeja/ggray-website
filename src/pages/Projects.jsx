@@ -571,6 +571,98 @@ const Projects = () => {
         </div>
       </section>
 
+      {/* Associated Companies Section */}
+      <section className="py-20 bg-gray-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Associated Companies
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Trusted by industry leaders — long-standing partnerships built on
+              quality and reliability
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid md:grid-cols-2 gap-8"
+          >
+            {[
+              {
+                name: "Unipatch Rubber Ltd",
+                logo: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773159807/omni_yuy5fu.png",
+                description:
+                  "Industrial Rubber & Automotive Components Manufacturer",
+                years: "30+",
+              },
+              {
+                name: "Mahindra & Mahindra Ltd",
+                logo: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773159808/mahindra_nqhhbf.png",
+                description: "Leading Automotive & Farm Equipment Manufacturer",
+                years: "16+",
+              },
+              {
+                name: "Astemo India Private Limited",
+                logo: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773159807/astemo_jxsl3g.png",
+                description: "Global Automotive Components Manufacturer",
+                years: "20+",
+              },
+              {
+                name: "GGray Racking",
+                logo: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773159807/ggray_logo.png",
+                description: "Industrial Storage & Racking Solutions Provider",
+                years: "7+",
+              },
+            ].map((company, index) => (
+              <motion.div
+                key={index}
+                variants={index % 2 === 0 ? fadeLeft : fadeRight}
+                transition={{ duration: 0.7, delay: index * 0.1 }}
+              >
+                <Card className="border-2 border-gray-100 hover:border-orange-500 hover:shadow-xl transition-all group">
+                  <CardContent className="p-6 flex items-center gap-6">
+                    {/* Logo Area */}
+                    <div className="w-28 h-20 flex-shrink-0 flex items-center justify-center bg-white rounded-lg border border-gray-200 overflow-hidden p-2">
+                      <img
+                        src={company.logo}
+                        alt={company.name}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+
+                    {/* Text Content */}
+                    <div className="flex-1">
+                      <div className="border-b border-gray-300 pb-1 mb-2">
+                        <h3 className="text-lg font-bold text-gray-900">
+                          {company.name}
+                        </h3>
+                      </div>
+                      <p className="text-gray-600 text-sm leading-relaxed mb-2">
+                        {company.description}
+                      </p>
+                      <span className="text-orange-600 font-bold text-sm">
+                        Associated for {company.years} Years
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 text-center">

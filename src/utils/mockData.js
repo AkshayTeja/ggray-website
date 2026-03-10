@@ -1506,37 +1506,43 @@ export const benefits = [
     id: 1,
     title: "Sustainable Solutions",
     description: "Eco-friendly and durable racking systems built to last decades.",
-    icon: "Leaf"
+    icon: "Leaf",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773160414/sustainable_vlx9dl.jpg"
   },
   {
     id: 2,
     title: "Premium Quality",
     description: "High-grade materials and precision engineering for superior performance.",
-    icon: "Award"
+    icon: "Award",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773160414/quality_qswnxf.jpg"
   },
   {
     id: 3,
     title: "Strong & Reliable",
     description: "Heavy-duty construction tested for maximum load capacity and safety.",
-    icon: "Shield"
+    icon: "Shield",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773160586/strong_efiz8e.jpg"
   },
   {
     id: 4,
     title: "Custom Solutions",
     description: "Tailored designs to meet your specific warehouse requirements.",
-    icon: "Settings"
+    icon: "Settings",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773160414/premium_fcji3u.jpg"
   },
   {
     id: 5,
     title: "Timely Delivery",
     description: "Efficient production and installation within committed timelines.",
-    icon: "Clock"
+    icon: "Clock",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773160414/timely_f1vmvb.jpg"
   },
   {
     id: 6,
     title: "Cost Effective",
     description: "Competitive pricing with best value for your investment.",
-    icon: "DollarSign"
+    icon: "DollarSign",
+    image: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773160414/cost_ijqz3y.jpg"
   }
 ];
 
