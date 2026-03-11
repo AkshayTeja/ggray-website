@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import {
   CheckCircle2,
   ArrowRight,
@@ -6,6 +6,7 @@ import {
   Layers,
   Package,
   ShoppingCart,
+  Search,
 } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
@@ -39,7 +40,6 @@ const SECTIONS = [
   },
 ];
 
-// Get section products based on ID ranges
 const getSectionProducts = (section, allProducts) => {
   return allProducts.filter(section.filter);
 };
@@ -47,9 +47,38 @@ const getSectionProducts = (section, allProducts) => {
 const Products = () => {
   const [activeSection, setActiveSection] = useState("racks");
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const currentSection = SECTIONS.find((s) => s.id === activeSection);
   const sectionProducts = getSectionProducts(currentSection, products);
+
+  // Filter products based on search query
+  const filteredProducts = useMemo(() => {
+    if (!searchQuery.trim()) return sectionProducts;
+
+    const q = searchQuery.toLowerCase().trim();
+
+    return sectionProducts.filter((p) => {
+      // Name match
+      if (p.name.toLowerCase().includes(q)) return true;
+      // Description match
+      if (p.description?.toLowerCase().includes(q)) return true;
+      // Features match
+      if (p.features?.some((f) => f.toLowerCase().includes(q))) return true;
+      // Applications match
+      if (p.applications?.some((a) => a.toLowerCase().includes(q))) return true;
+      // Specifications match (values)
+      if (p.specifications) {
+        const specValues = Object.values(p.specifications)
+          .join(" ")
+          .toLowerCase();
+        if (specValues.includes(q)) return true;
+        const specKeys = Object.keys(p.specifications).join(" ").toLowerCase();
+        if (specKeys.includes(q)) return true;
+      }
+      return false;
+    });
+  }, [sectionProducts, searchQuery]);
 
   const handleInquiry = (productName) => {
     const message = productName
@@ -61,20 +90,16 @@ const Products = () => {
     );
   };
 
+  // When switching tabs, clear search
+  const handleSectionChange = (sectionId) => {
+    setActiveSection(sectionId);
+    setSearchQuery("");
+  };
+
   // Animation variants
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     show: { opacity: 1, y: 0 },
-  };
-
-  const fadeLeft = {
-    hidden: { opacity: 0, x: -60 },
-    show: { opacity: 1, x: 0 },
-  };
-
-  const fadeRight = {
-    hidden: { opacity: 0, x: 60 },
-    show: { opacity: 1, x: 0 },
   };
 
   const scaleIn = {
@@ -109,9 +134,7 @@ const Products = () => {
     show: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.4,
-      },
+      transition: { duration: 0.4 },
     },
   };
 
@@ -121,116 +144,105 @@ const Products = () => {
       opacity: 1,
       scale: 1,
       y: 0,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.3, ease: "easeOut" },
     },
     exit: {
       opacity: 0,
       scale: 0.95,
       y: 10,
-      transition: {
-        duration: 0.2,
-      },
+      transition: { duration: 0.2 },
     },
   };
 
   const backdropVariant = {
     hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        duration: 0.2,
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        duration: 0.2,
-      },
-    },
+    show: { opacity: 1, transition: { duration: 0.2 } },
+    exit: { opacity: 0, transition: { duration: 0.2 } },
   };
 
   return (
     <div className="min-h-screen bg-white">
       <style>{`
         @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
+          from { opacity: 0; transform: translateX(-40px); }
+          to { opacity: 1; transform: translateX(0); }
         }
-
         @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateX(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
+          from { opacity: 0; transform: translateX(40px); }
+          to { opacity: 1; transform: translateX(0); }
         }
-
         @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes scaleIn {
-          from {
-            opacity: 0;
-            transform: scale(0.9);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
+          from { opacity: 0; transform: scale(0.9); }
+          to { opacity: 1; transform: scale(1); }
         }
+        .animate-slide-in-left { animation: slideInLeft 0.7s ease-out forwards; }
+        .animate-slide-in-right { animation: slideInRight 0.7s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+        .animate-scale-in { animation: scaleIn 0.6s ease-out forwards; }
+        .stagger-1 { animation-delay: 0.1s; opacity: 0; }
+        .stagger-2 { animation-delay: 0.2s; opacity: 0; }
+        .scrollbar-none::-webkit-scrollbar { display: none; }
+        .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
 
-        .animate-slide-in-left {
-          animation: slideInLeft 0.7s ease-out forwards;
+        /* Search bar styles */
+        .search-wrapper {
+          position: relative;
+          max-width: 480px;
+          width: 100%;
         }
-
-        .animate-slide-in-right {
-          animation: slideInRight 0.7s ease-out forwards;
+        .search-input {
+          width: 100%;
+          padding: 10px 40px 10px 42px;
+          border: 1.5px solid #e5e7eb;
+          border-radius: 9999px;
+          font-size: 14px;
+          color: #111827;
+          background: #f9fafb;
+          outline: none;
+          transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
         }
-
-        .animate-fade-in-up {
-          animation: fadeInUp 0.6s ease-out forwards;
+        .search-input:focus {
+          border-color: #ea580c;
+          background: #fff;
+          box-shadow: 0 0 0 3px rgba(234,88,12,0.1);
         }
-
-        .animate-scale-in {
-          animation: scaleIn 0.6s ease-out forwards;
+        .search-input::placeholder {
+          color: #9ca3af;
         }
-
-        .stagger-1 {
-          animation-delay: 0.1s;
-          opacity: 0;
+        .search-icon {
+          position: absolute;
+          left: 14px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #9ca3af;
+          pointer-events: none;
+          transition: color 0.2s;
         }
-
-        .stagger-2 {
-          animation-delay: 0.2s;
-          opacity: 0;
+        .search-wrapper:focus-within .search-icon {
+          color: #ea580c;
         }
-
-        .scrollbar-none::-webkit-scrollbar {
-          display: none;
+        .search-clear {
+          position: absolute;
+          right: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          background: #e5e7eb;
+          border: none;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: background 0.2s;
         }
-        .scrollbar-none {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
+        .search-clear:hover {
+          background: #d1d5db;
         }
       `}</style>
 
@@ -256,9 +268,10 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Section Tabs */}
+      {/* Section Tabs + Search Bar */}
       <div className="sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4">
+          {/* Tabs row */}
           <div className="flex gap-1">
             {SECTIONS.map((section, index) => {
               const Icon = section.icon;
@@ -270,7 +283,7 @@ const Products = () => {
                   initial="hidden"
                   animate="show"
                   transition={{ delay: index * 0.1 }}
-                  onClick={() => setActiveSection(section.id)}
+                  onClick={() => handleSectionChange(section.id)}
                   className={`
                     flex items-center justify-center gap-2 px-3 sm:px-6 py-4 text-xs sm:text-sm font-semibold whitespace-nowrap border-b-2 transition-all flex-1
                     ${
@@ -290,62 +303,120 @@ const Products = () => {
               );
             })}
           </div>
+
+          {/* Search bar row */}
+          <div className="flex items-center justify-center py-3 gap-4">
+            <div className="search-wrapper">
+              <Search size={16} className="search-icon" />
+              <input
+                type="text"
+                className="search-input"
+                placeholder={`Search ${currentSection.label.toLowerCase()}… name, material, capacity`}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              {searchQuery && (
+                <button
+                  className="search-clear"
+                  onClick={() => setSearchQuery("")}
+                  aria-label="Clear search"
+                >
+                  <X size={11} color="#6b7280" />
+                </button>
+              )}
+            </div>
+
+            {/* Result count badge */}
+            <p className="text-sm text-gray-500 whitespace-nowrap hidden sm:block">
+              {searchQuery ? (
+                <>
+                  <span className="font-semibold text-gray-800">
+                    {filteredProducts.length}
+                  </span>{" "}
+                  of {sectionProducts.length} products
+                </>
+              ) : (
+                <>
+                  <span className="font-semibold text-gray-800">
+                    {sectionProducts.length}
+                  </span>{" "}
+                  products
+                </>
+              )}
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Section Content */}
       <section className="py-20 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <motion.div
-              variants={scaleIn}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-orange-50 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
-            >
-              {React.createElement(currentSection.icon, { size: 16 })}
-              {currentSection.label}
-            </motion.div>
-            <motion.h2
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-            >
-              {currentSection.label === "Racks" && "Industrial Racking Systems"}
-              {currentSection.label === "Mezzanine Floors" &&
-                "Mezzanine Floor Solutions"}
-              {currentSection.label === "Trolleys" &&
-                "Material Handling Trolleys"}
-            </motion.h2>
-            <motion.p
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-gray-600 max-w-2xl mx-auto"
-            >
-              {currentSection.description}
-            </motion.p>
-          </div>
+          {/* Section Header — hide when searching */}
+          {!searchQuery && (
+            <div className="text-center mb-12">
+              <motion.div
+                variants={scaleIn}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 bg-orange-50 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
+              >
+                {React.createElement(currentSection.icon, { size: 16 })}
+                {currentSection.label}
+              </motion.div>
+              <motion.h2
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+              >
+                {currentSection.label === "Racks" &&
+                  "Industrial Racking Systems"}
+                {currentSection.label === "Mezzanine Floors" &&
+                  "Mezzanine Floor Solutions"}
+                {currentSection.label === "Trolleys" &&
+                  "Material Handling Trolleys"}
+              </motion.h2>
+              <motion.p
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-gray-600 max-w-2xl mx-auto"
+              >
+                {currentSection.description}
+              </motion.p>
+            </div>
+          )}
+
+          {/* Search results heading */}
+          {searchQuery && (
+            <div className="mb-8">
+              <p className="text-gray-500 text-sm">
+                Showing results for{" "}
+                <span className="font-semibold text-gray-800">
+                  "{searchQuery}"
+                </span>{" "}
+                in {currentSection.label}
+              </p>
+            </div>
+          )}
 
           {/* Products Grid */}
-          {sectionProducts.length > 0 ? (
+          {filteredProducts.length > 0 ? (
             <motion.div
-              key={activeSection}
+              key={`${activeSection}-${searchQuery}`}
               variants={staggerContainer}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, margin: "-100px" }}
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {sectionProducts.map((product, index) => {
+              {filteredProducts.map((product) => {
                 const productFeatures = product.features || [];
                 return (
                   <motion.div key={product.id} variants={cardVariant}>
@@ -399,8 +470,22 @@ const Products = () => {
               })}
             </motion.div>
           ) : (
-            <div className="text-center py-16 text-gray-400">
-              <p className="text-lg">No products found in this category.</p>
+            <div className="text-center py-16">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-4">
+                <Search size={28} className="text-gray-400" />
+              </div>
+              <p className="text-lg font-semibold text-gray-700 mb-1">
+                No products found
+              </p>
+              <p className="text-gray-400 text-sm mb-4">
+                No results for "{searchQuery}" in {currentSection.label}
+              </p>
+              <button
+                onClick={() => setSearchQuery("")}
+                className="text-orange-600 text-sm font-medium hover:underline"
+              >
+                Clear search
+              </button>
             </div>
           )}
         </div>
@@ -446,7 +531,6 @@ const Products = () => {
                   {selectedProduct.description}
                 </p>
 
-                {/* Key Features */}
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Key Features
                 </h3>
@@ -465,7 +549,6 @@ const Products = () => {
                   ))}
                 </div>
 
-                {/* How It Works */}
                 {selectedProduct.howItWorks && (
                   <>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -479,7 +562,6 @@ const Products = () => {
                   </>
                 )}
 
-                {/* Specifications - Only for Trolleys (ID >= 27) */}
                 {selectedProduct.specifications && (
                   <>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -502,7 +584,6 @@ const Products = () => {
                   </>
                 )}
 
-                {/* Applications - Only for Trolleys (ID >= 27) */}
                 {selectedProduct.applications && (
                   <>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -612,7 +693,7 @@ const Products = () => {
               "Pallet Rack Suppliers Guwahati",
               "Mezzanine Floor Manufacturer Assam",
               "Heavy Duty Racks Northeast",
-            ].map((keyword, index) => (
+            ].map((keyword) => (
               <motion.span
                 key={keyword}
                 variants={cardVariant}
