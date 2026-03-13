@@ -285,7 +285,7 @@ const Home = () => {
               <Button
                 onClick={handleGetQuote}
                 size="lg"
-                className=" bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 text-lg font-semibold transition-all hover:shadow-2xl"
+                className=" bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 text-lg font-semibold transition-all hover:shadow-2xl rounded-sm"
               >
                 Get a Free Layout Plan
                 <ArrowRight className="ml-2" size={20} />
@@ -294,7 +294,7 @@ const Home = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className=" bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg font-semibold transition-all w-full sm:w-auto"
+                  className=" bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg font-semibold transition-all w-full sm:w-auto rounded-sm"
                 >
                   View Products
                 </Button>
@@ -391,7 +391,7 @@ const Home = () => {
                 viewport={{ once: true }}
               >
                 <Link to="/about">
-                  <Button className=" bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 font-semibold transition-all hover:shadow-2xl">
+                  <Button className=" bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 font-semibold transition-all hover:shadow-2xl rounded-sm">
                     Learn More About Us
                     <ArrowRight className="ml-2" size={18} />
                   </Button>
@@ -568,7 +568,7 @@ const Home = () => {
             <Link to="/products">
               <Button
                 size="lg"
-                className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 font-semibold transition-all hover:shadow-2xl"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 font-semibold transition-all hover:shadow-2xl rounded-sm"
               >
                 View All Products
                 <ArrowRight className="ml-2" size={18} />
@@ -719,7 +719,7 @@ const Home = () => {
             <Button
               onClick={handleGetQuote}
               size="lg"
-              className=" bg-orange-600 hover:bg-orange-700 text-white px-12 py-6 text-lg font-semibold transition-all hover:shadow-2xl"
+              className=" bg-orange-600 hover:bg-orange-700 text-white px-12 py-6 text-lg font-semibold transition-all hover:shadow-2xl rounded-sm"
             >
               Contact Us Now
               <ArrowRight className="ml-2" size={20} />

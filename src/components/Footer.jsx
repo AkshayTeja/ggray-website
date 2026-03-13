@@ -1,11 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock, ArrowRight } from 'lucide-react';
-import { companyInfo, products } from '../utils/mockData';
+import React from "react";
+import { Link } from "react-router-dom";
+import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
+import { companyInfo, products } from "../utils/mockData";
 
 const Footer = () => {
   const handleWhatsAppClick = () => {
-    window.open(`https://wa.me/${companyInfo.whatsapp}?text=Hello, I would like to inquire about your racking systems.`, '_blank');
+    window.open(
+      `https://wa.me/${companyInfo.whatsapp}?text=Hello, I would like to inquire about your racking systems.`,
+      "_blank",
+    );
   };
 
   return (
@@ -90,52 +93,75 @@ const Footer = () => {
         {/* Main Footer */}
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
             {/* Company Info */}
             <div className="footer-col">
-              <h3 className="text-2xl font-bold text-white mb-1 tracking-tight">GGRAY</h3>
+              <h3 className="text-2xl font-bold text-white mb-1 tracking-tight">
+                GGRAY
+              </h3>
               <div className="w-8 h-0.5 bg-orange-500 mb-4" />
               <p className="text-gray-400 mb-5 text-sm leading-relaxed">
-                Leading manufacturer of industrial warehouse storage solutions in Northeast India.
+                Leading manufacturer of industrial warehouse storage solutions
+                in Northeast India.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3 contact-item">
-                  <MapPin size={16} className="text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-gray-400">{companyInfo.address}</span>
+                  <MapPin
+                    size={16}
+                    className="text-orange-500 mt-0.5 flex-shrink-0"
+                  />
+                  <span className="text-sm text-gray-400">
+                    {companyInfo.address}
+                  </span>
                 </div>
                 <div className="flex items-center gap-3 contact-item">
                   <Phone size={16} className="text-orange-500 flex-shrink-0" />
-                  <a href={`tel:${companyInfo.phone}`} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+                  <a
+                    href={`tel:${companyInfo.phone}`}
+                    className="text-sm text-gray-400 hover:text-orange-500 transition-colors"
+                  >
                     {companyInfo.phone}
                   </a>
                 </div>
                 <div className="flex items-center gap-3 contact-item">
                   <Mail size={16} className="text-orange-500 flex-shrink-0" />
-                  <a href={`mailto:${companyInfo.email}`} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+                  <a
+                    href={`mailto:${companyInfo.email}`}
+                    className="text-sm text-gray-400 hover:text-orange-500 transition-colors"
+                  >
                     {companyInfo.email}
                   </a>
                 </div>
                 <div className="flex items-start gap-3 contact-item">
-                  <Clock size={16} className="text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-gray-400">{companyInfo.workingHours}</span>
+                  <Clock
+                    size={16}
+                    className="text-orange-500 mt-0.5 flex-shrink-0"
+                  />
+                  <span className="text-sm text-gray-400">
+                    {companyInfo.workingHours}
+                  </span>
                 </div>
               </div>
             </div>
 
             {/* Quick Links */}
             <div className="footer-col">
-              <h4 className="text-base font-semibold text-white mb-1 tracking-wide uppercase">Quick Links</h4>
+              <h4 className="text-base font-semibold text-white mb-1 tracking-wide uppercase">
+                Quick Links
+              </h4>
               <div className="w-8 h-0.5 bg-orange-500 mb-4" />
               <ul className="space-y-2.5">
                 {[
-                  { to: '/', label: 'Home' },
-                  { to: '/about', label: 'About Us' },
-                  { to: '/products', label: 'Products' },
-                  { to: '/projects', label: 'Projects' },
-                  { to: '/contact', label: 'Contact Us' },
+                  { to: "/", label: "Home" },
+                  { to: "/about", label: "About Us" },
+                  { to: "/products", label: "Products" },
+                  { to: "/projects", label: "Projects" },
+                  { to: "/contact", label: "Contact Us" },
                 ].map(({ to, label }) => (
                   <li key={to}>
-                    <Link to={to} className="footer-link text-sm text-gray-400 hover:text-orange-500">
+                    <Link
+                      to={to}
+                      className="footer-link text-sm text-gray-400 hover:text-orange-500"
+                    >
                       {label}
                     </Link>
                   </li>
@@ -145,12 +171,17 @@ const Footer = () => {
 
             {/* Popular Products */}
             <div className="footer-col">
-              <h4 className="text-base font-semibold text-white mb-1 tracking-wide uppercase">Popular Products</h4>
+              <h4 className="text-base font-semibold text-white mb-1 tracking-wide uppercase">
+                Popular Products
+              </h4>
               <div className="w-8 h-0.5 bg-orange-500 mb-4" />
               <ul className="space-y-2.5">
                 {products.slice(0, 6).map((product) => (
                   <li key={product.id}>
-                    <Link to="/products" className="footer-link text-sm text-gray-400 hover:text-orange-500">
+                    <Link
+                      to="/products"
+                      className="footer-link text-sm text-gray-400 hover:text-orange-500"
+                    >
                       {product.name}
                     </Link>
                   </li>
@@ -160,20 +191,25 @@ const Footer = () => {
 
             {/* Call to Action */}
             <div className="footer-col">
-              <h4 className="text-base font-semibold text-white mb-1 tracking-wide uppercase">Get In Touch</h4>
+              <h4 className="text-base font-semibold text-white mb-1 tracking-wide uppercase">
+                Get In Touch
+              </h4>
               <div className="w-8 h-0.5 bg-orange-500 mb-4" />
               <p className="text-gray-400 text-sm mb-5 leading-relaxed">
-                Need a custom storage solution? Contact us for a free warehouse layout consultation.
+                Need a custom storage solution? Contact us for a free warehouse
+                layout consultation.
               </p>
               <button
                 onClick={handleWhatsAppClick}
-                className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-md transition-all hover:shadow-2xl w-full font-semibold flex items-center justify-center gap-2 group"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-md transition-all hover:shadow-2xl w-full font-semibold flex items-center justify-center gap-2 group rounded-sm"
               >
                 WhatsApp Us Now
-                <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={16}
+                  className="transition-transform duration-200 group-hover:translate-x-1"
+                />
               </button>
             </div>
-
           </div>
         </div>
 
@@ -186,12 +222,19 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-500 text-center md:text-left">
-              © {new Date().getFullYear()} GGRAY Racking System. All rights reserved.
+              © {new Date().getFullYear()} GGRAY Racking System. All rights
+              reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-5 text-sm text-gray-500">
-              <span className="seo-tag cursor-pointer">Warehouse Racks Guwahati</span>
-              <span className="seo-tag cursor-pointer">Industrial Racks Assam</span>
-              <span className="seo-tag cursor-pointer">Storage Solutions Northeast India</span>
+              <span className="seo-tag cursor-pointer">
+                Warehouse Racks Guwahati
+              </span>
+              <span className="seo-tag cursor-pointer">
+                Industrial Racks Assam
+              </span>
+              <span className="seo-tag cursor-pointer">
+                Storage Solutions Northeast India
+              </span>
             </div>
           </div>
         </div>

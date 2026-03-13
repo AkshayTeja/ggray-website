@@ -102,11 +102,11 @@ const Header = () => {
             {/* CTA Button */}
             <div className="hidden lg:block">
               <Button
-                  onClick={handleContactClick}
-                  className="button-shine bg-orange-600 hover:bg-white text-white hover:text-orange-600 border-2 border-orange-600 hover:border-orange-600 w-full mt-2 transition-all duration-200"
-                >
-                  Get Free Layout Plan
-                </Button>
+                onClick={handleContactClick}
+                className="button-shine bg-orange-600 hover:bg-white text-white hover:text-orange-600 border-2 border-orange-600 hover:border-orange-600 w-full mt-2 transition-all duration-200 rounded-sm"
+              >
+                Get Free Layout Plan
+              </Button>
             </div>
 
             {/* Mobile Menu Button */}

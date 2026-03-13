@@ -303,48 +303,6 @@ const Products = () => {
               );
             })}
           </div>
-
-          {/* Search bar row */}
-          <div className="flex items-center justify-center py-3 gap-4">
-            <div className="search-wrapper">
-              <Search size={16} className="search-icon" />
-              <input
-                type="text"
-                className="search-input"
-                placeholder={`Search ${currentSection.label.toLowerCase()}… name, material, capacity`}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              {searchQuery && (
-                <button
-                  className="search-clear"
-                  onClick={() => setSearchQuery("")}
-                  aria-label="Clear search"
-                >
-                  <X size={11} color="#6b7280" />
-                </button>
-              )}
-            </div>
-
-            {/* Result count badge */}
-            <p className="text-sm text-gray-500 whitespace-nowrap hidden sm:block">
-              {searchQuery ? (
-                <>
-                  <span className="font-semibold text-gray-800">
-                    {filteredProducts.length}
-                  </span>{" "}
-                  of {sectionProducts.length} products
-                </>
-              ) : (
-                <>
-                  <span className="font-semibold text-gray-800">
-                    {sectionProducts.length}
-                  </span>{" "}
-                  products
-                </>
-              )}
-            </p>
-          </div>
         </div>
       </div>
 
@@ -353,43 +311,75 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header — hide when searching */}
           {!searchQuery && (
-            <div className="text-center mb-12">
-              <motion.div
-                variants={scaleIn}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 bg-orange-50 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
-              >
-                {React.createElement(currentSection.icon, { size: 16 })}
-                {currentSection.label}
-              </motion.div>
-              <motion.h2
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-              >
-                {currentSection.label === "Racks" &&
-                  "Industrial Racking Systems"}
-                {currentSection.label === "Mezzanine Floors" &&
-                  "Mezzanine Floor Solutions"}
-                {currentSection.label === "Trolleys" &&
-                  "Material Handling Trolleys"}
-              </motion.h2>
-              <motion.p
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-gray-600 max-w-2xl mx-auto"
-              >
-                {currentSection.description}
-              </motion.p>
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-10">
+              {/* Left: heading */}
+              <div className="flex-1 min-w-0">
+                <motion.div
+                  variants={scaleIn}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="inline-flex items-center gap-2 bg-orange-50 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-3"
+                >
+                  {React.createElement(currentSection.icon, { size: 16 })}
+                  {currentSection.label}
+                </motion.div>
+                <motion.h2
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
+                >
+                  {currentSection.label === "Racks" &&
+                    "Industrial Racking Systems"}
+                  {currentSection.label === "Mezzanine Floors" &&
+                    "Mezzanine Floor Solutions"}
+                  {currentSection.label === "Trolleys" &&
+                    "Material Handling Trolleys"}
+                </motion.h2>
+                <motion.p
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-gray-600 max-w-xl"
+                >
+                  {currentSection.description}
+                </motion.p>
+              </div>
+
+              {/* Right: search bar */}
+              <div className="flex items-center gap-3 sm:pt-2">
+                <div className="search-wrapper">
+                  <Search size={16} className="search-icon" />
+                  <input
+                    type="text"
+                    className="search-input"
+                    placeholder={`Search ${currentSection.label.toLowerCase()}…`}
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                  {searchQuery && (
+                    <button
+                      className="search-clear"
+                      onClick={() => setSearchQuery("")}
+                      aria-label="Clear search"
+                    >
+                      <X size={11} color="#6b7280" />
+                    </button>
+                  )}
+                </div>
+                <p className="text-sm text-gray-500 whitespace-nowrap hidden sm:block">
+                  <span className="font-semibold text-gray-800">
+                    {filteredProducts.length}
+                  </span>{" "}
+                  {searchQuery ? `of ${sectionProducts.length}` : ""} products
+                </p>
+              </div>
             </div>
           )}
 
@@ -458,7 +448,7 @@ const Products = () => {
                             e.stopPropagation();
                             handleInquiry(product.name);
                           }}
-                          className="w-full bg-orange-600 hover:bg-orange-700 text-white"
+                          className="w-full bg-orange-600 hover:bg-orange-700 text-white rounded-sm"
                         >
                           Get Quote
                           <ArrowRight className="ml-2" size={16} />
@@ -667,7 +657,7 @@ const Products = () => {
             <Button
               onClick={() => handleInquiry()}
               size="lg"
-              className="bg-orange-600 hover:bg-orange-700 text-white px-12 py-6 text-lg"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-12 py-6 text-lg rounded-sm"
             >
               Discuss Your Requirements
               <ArrowRight className="ml-2" size={20} />

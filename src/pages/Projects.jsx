@@ -619,8 +619,8 @@ const Projects = () => {
                 years: "20+",
               },
               {
-                name: "GGray Racking",
-                logo: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773159807/ggray_logo.png",
+                name: "Orien's Breathing Wellness ",
+                logo: "https://res.cloudinary.com/dh3s89eim/image/upload/v1773414427/oriens_y9ronc.jpg",
                 description: "Industrial Storage & Racking Solutions Provider",
                 years: "7+",
               },
@@ -689,7 +689,7 @@ const Projects = () => {
           </motion.p>
           <button
             onClick={handleWhatsAppClick}
-            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-md transition-all hover:shadow-2xl font-semibold inline-flex items-center justify-center gap-2 group"
+            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-md transition-all hover:shadow-2xl font-semibold inline-flex items-center justify-center gap-2 group rounded-sm"
           >
             Start your project today
           </button>
