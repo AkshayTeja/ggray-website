@@ -15,6 +15,7 @@ import {
 import { Leaf, Award, Shield, Settings, Clock, DollarSign } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const handleGetQuote = () => {
@@ -113,6 +114,32 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>
+          GGRAY Racking System | Warehouse Storage Solutions in Northeast India
+        </title>
+        <meta
+          name="description"
+          content="Leading manufacturer of heavy-duty industrial racks, mezzanine floors, and warehouse storage systems in Assam & Northeast India. 20+ years experience. Get a free layout plan today."
+        />
+        <meta
+          name="keywords"
+          content="warehouse racking system, industrial storage solutions, heavy duty racks Northeast India, mezzanine floor Assam"
+        />
+        <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "GGRAY Racking System",
+      "description": "Manufacturer of industrial warehouse storage solutions in Northeast India",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Assam",
+        "addressCountry": "IN"
+      }
+    }
+  `}</script>
+      </Helmet>
       <style>{`
         @keyframes shine {
           0% {
