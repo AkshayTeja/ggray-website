@@ -311,7 +311,7 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header — hide when searching */}
           {!searchQuery && (
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
               {/* Left: heading */}
               <div className="flex-1 min-w-0">
                 <motion.div
@@ -351,37 +351,37 @@ const Products = () => {
                   {currentSection.description}
                 </motion.p>
               </div>
-
-              {/* Right: search bar */}
-              <div className="flex items-center gap-3 sm:pt-2">
-                <div className="search-wrapper">
-                  <Search size={16} className="search-icon" />
-                  <input
-                    type="text"
-                    className="search-input"
-                    placeholder={`Search ${currentSection.label.toLowerCase()}…`}
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
-                  {searchQuery && (
-                    <button
-                      className="search-clear"
-                      onClick={() => setSearchQuery("")}
-                      aria-label="Clear search"
-                    >
-                      <X size={11} color="#6b7280" />
-                    </button>
-                  )}
-                </div>
-                <p className="text-sm text-gray-500 whitespace-nowrap hidden sm:block">
-                  <span className="font-semibold text-gray-800">
-                    {filteredProducts.length}
-                  </span>{" "}
-                  {searchQuery ? `of ${sectionProducts.length}` : ""} products
-                </p>
-              </div>
             </div>
           )}
+
+          {/* Search bar — always mounted, never conditionally removed */}
+          <div className="flex items-center gap-3 mb-8">
+            <div className="search-wrapper">
+              <Search size={16} className="search-icon" />
+              <input
+                type="text"
+                className="search-input"
+                placeholder={`Search ${currentSection.label.toLowerCase()}…`}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              {searchQuery && (
+                <button
+                  className="search-clear"
+                  onClick={() => setSearchQuery("")}
+                  aria-label="Clear search"
+                >
+                  <X size={11} color="#6b7280" />
+                </button>
+              )}
+            </div>
+            <p className="text-sm text-gray-500 whitespace-nowrap hidden sm:block">
+              <span className="font-semibold text-gray-800">
+                {filteredProducts.length}
+              </span>{" "}
+              {searchQuery ? `of ${sectionProducts.length}` : ""} products
+            </p>
+          </div>
 
           {/* Search results heading */}
           {searchQuery && (
