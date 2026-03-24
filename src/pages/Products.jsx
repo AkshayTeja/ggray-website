@@ -260,6 +260,16 @@ const Products = () => {
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-slide-in-left">
               Our Products
+              <span className="hidden md:inline text-white/60 font-light mx-3">
+                /
+              </span>
+              <span className="hidden md:inline">
+                {currentSection.label === "Racks"
+                  ? "Industrial Racking Systems"
+                  : currentSection.label === "Mezzanine Floors"
+                    ? "Mezzanine Floor Solutions"
+                    : "Material Handling Trolleys"}
+              </span>
             </h1>
             <p className="text-xl text-gray-200 animate-slide-in-left stagger-1">
               Comprehensive range of industrial storage solutions
@@ -307,50 +317,39 @@ const Products = () => {
       </div>
 
       {/* Section Content */}
-      <section className="py-20 bg-white overflow-hidden">
+      <section className="py-10 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header — hide when searching */}
           {!searchQuery && (
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
-              {/* Left: heading */}
-              <div className="flex-1 min-w-0">
-                <motion.div
-                  variants={scaleIn}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className="inline-flex items-center gap-2 bg-orange-50 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-3"
-                >
-                  {React.createElement(currentSection.icon, { size: 16 })}
-                  {currentSection.label}
-                </motion.div>
-                <motion.h2
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
-                >
-                  {currentSection.label === "Racks" &&
-                    "Industrial Racking Systems"}
-                  {currentSection.label === "Mezzanine Floors" &&
-                    "Mezzanine Floor Solutions"}
-                  {currentSection.label === "Trolleys" &&
-                    "Material Handling Trolleys"}
-                </motion.h2>
-                <motion.p
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-gray-600 max-w-xl"
-                >
-                  {currentSection.description}
-                </motion.p>
-              </div>
+            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-6">
+              <motion.h2
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-3xl md:text-4xl font-bold text-gray-900 shrink-0"
+              >
+                {currentSection.label === "Racks" &&
+                  "Industrial Racking Systems"}
+                {currentSection.label === "Mezzanine Floors" &&
+                  "Mezzanine Floor Solutions"}
+                {currentSection.label === "Trolleys" &&
+                  "Material Handling Trolleys"}
+              </motion.h2>
+              <span className="hidden md:block text-gray-300 text-2xl font-light">
+                |
+              </span>
+              <motion.p
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-gray-500 text-base"
+              >
+                {currentSection.description}
+              </motion.p>
             </div>
           )}
 
