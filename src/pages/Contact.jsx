@@ -7,6 +7,29 @@ import { Textarea } from "../components/ui/textarea";
 import { companyInfo } from "../utils/mockData";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+
+<Helmet>
+  <title>Contact GGRAY | Get Free Warehouse Layout Plan — Guwahati</title>
+  <meta
+    name="description"
+    content="Contact GGRAY Racking System in Guwahati, Assam. Get a free warehouse layout consultation and quote. Call +91 97079-18272 or WhatsApp us today."
+  />
+  <meta
+    name="keywords"
+    content="rack supplier contact Guwahati, warehouse storage quote Assam, industrial rack inquiry"
+  />
+  <link rel="canonical" href="https://grayrack.com/contact" />
+  <meta
+    property="og:title"
+    content="Contact GGRAY | Get Free Warehouse Layout Plan — Guwahati"
+  />
+  <meta
+    property="og:description"
+    content="Get a free warehouse layout consultation and quote. Call +91 97079-18272 or WhatsApp us today."
+  />
+  <meta property="og:url" content="https://grayrack.com/contact" />
+</Helmet>;
 
 const Contact = () => {
   const [formData, setFormData] = useState({

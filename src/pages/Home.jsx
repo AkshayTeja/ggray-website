@@ -16,6 +16,31 @@ import { Leaf, Award, Shield, Settings, Clock, DollarSign } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import FAQSection from "../components/FAQSection";
+
+<Helmet>
+  <title>
+    GGRAY Racking System | #1 Warehouse Rack Manufacturer in Guwahati, Assam
+  </title>
+  <meta
+    name="description"
+    content="GGRAY Racking System — premium heavy-duty racks, pallet racks, mezzanine floors & storage solutions. Serving Guwahati, Assam & all Northeast India. 20+ years. Free layout consultation."
+  />
+  <meta
+    name="keywords"
+    content="warehouse rack Guwahati, industrial storage Assam, rack manufacturer Northeast India"
+  />
+  <link rel="canonical" href="https://grayrack.com/" />
+  <meta
+    property="og:title"
+    content="GGRAY Racking System | #1 Warehouse Rack Manufacturer in Guwahati, Assam"
+  />
+  <meta
+    property="og:description"
+    content="Premium heavy-duty racks, pallet racks, mezzanine floors & storage solutions. Serving all Northeast India. 20+ years."
+  />
+  <meta property="og:url" content="https://grayrack.com/" />
+</Helmet>;
 
 const Home = () => {
   const handleGetQuote = () => {
@@ -730,6 +755,29 @@ const Home = () => {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-50 overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Common questions about our racks, pricing, and service across
+              Guwahati & Northeast India
+            </p>
+          </motion.div>
+
+          <FAQSection />
         </div>
       </section>
 

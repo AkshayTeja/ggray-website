@@ -5,6 +5,31 @@ import { Badge } from "../components/ui/badge";
 import { projects } from "../utils/mockData";
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
+
+<Helmet>
+  <title>
+    Our Projects | Warehouse Storage Installations by GGRAY in Northeast India
+  </title>
+  <meta
+    name="description"
+    content="See real warehouse installations by GGRAY across Assam, Meghalaya, Manipur & Northeast India. Heavy-duty racks, mezzanine floors & custom storage solutions for 500+ clients."
+  />
+  <meta
+    name="keywords"
+    content="warehouse project Guwahati, rack installation Assam, storage solution project Northeast India"
+  />
+  <link rel="canonical" href="https://grayrack.com/projects" />
+  <meta
+    property="og:title"
+    content="Our Projects | Warehouse Storage Installations by GGRAY in Northeast India"
+  />
+  <meta
+    property="og:description"
+    content="Real warehouse installations across Assam, Meghalaya, Manipur & Northeast India. Heavy-duty racks, mezzanine floors & custom storage for 500+ clients."
+  />
+  <meta property="og:url" content="https://grayrack.com/projects" />
+</Helmet>;
 
 const Projects = () => {
   // Animation variants

@@ -12,6 +12,32 @@ import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { products, companyInfo } from "../utils/mockData";
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+
+<Helmet>
+  <title>
+    Industrial Racks, Mezzanine Floors & Trolleys | GGRAY Racking System
+    Guwahati
+  </title>
+  <meta
+    name="description"
+    content="Browse our full range: pallet racks, slotted angle racks, cantilever racks, mezzanine floors, mobile compactors & warehouse trolleys. Custom solutions for every warehouse."
+  />
+  <meta
+    name="keywords"
+    content="pallet rack Guwahati, mezzanine floor Assam, warehouse trolley Northeast India"
+  />
+  <link rel="canonical" href="https://grayrack.com/products" />
+  <meta
+    property="og:title"
+    content="Industrial Racks, Mezzanine Floors & Trolleys | GGRAY Racking System Guwahati"
+  />
+  <meta
+    property="og:description"
+    content="Browse our full range: pallet racks, slotted angle racks, cantilever racks, mezzanine floors, mobile compactors & warehouse trolleys."
+  />
+  <meta property="og:url" content="https://grayrack.com/products" />
+</Helmet>;
 
 const SECTIONS = [
   {

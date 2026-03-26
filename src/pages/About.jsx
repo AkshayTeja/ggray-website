@@ -1,8 +1,33 @@
-import React from 'react';
-import { CheckCircle2, Target, Award, Users, TrendingUp } from 'lucide-react';
-import { Card, CardContent } from '../components/ui/card';
-import { whyChooseUs } from '../utils/mockData';
-import { motion } from 'framer-motion';
+import React from "react";
+import { CheckCircle2, Target, Award, Users, TrendingUp } from "lucide-react";
+import { Card, CardContent } from "../components/ui/card";
+import { whyChooseUs } from "../utils/mockData";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+
+<Helmet>
+  <title>
+    About GGRAY | 20+ Years of Industrial Storage Manufacturing in Assam
+  </title>
+  <meta
+    name="description"
+    content="Learn about GGRAY Racking System — Northeast India's trusted manufacturer of heavy-duty industrial racks with over 20 years of experience serving FMCG, pharma, logistics & more."
+  />
+  <meta
+    name="keywords"
+    content="rack manufacturer Assam, industrial storage company Guwahati, warehouse solution Northeast"
+  />
+  <link rel="canonical" href="https://grayrack.com/about" />
+  <meta
+    property="og:title"
+    content="About GGRAY | 20+ Years of Industrial Storage Manufacturing in Assam"
+  />
+  <meta
+    property="og:description"
+    content="Northeast India's trusted manufacturer of heavy-duty industrial racks with over 20 years of experience serving FMCG, pharma, logistics & more."
+  />
+  <meta property="og:url" content="https://grayrack.com/about" />
+</Helmet>;
 
 const About = () => {
   const fadeUp = {
@@ -70,14 +95,14 @@ const About = () => {
 
   const itemBounce = {
     hidden: { opacity: 0, y: -30 },
-    show: { 
-      opacity: 1, 
+    show: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
         bounce: 0.4,
-        duration: 0.8
-      }
+        duration: 0.8,
+      },
     },
   };
 
@@ -191,7 +216,8 @@ const About = () => {
               About GGRAY Racking System
             </h1>
             <p className="text-xl text-gray-200 max-w-2xl animate-slide-in-left stagger-1">
-              Northeast India's leading manufacturer of premium industrial storage solutions
+              Northeast India's leading manufacturer of premium industrial
+              storage solutions
             </p>
           </div>
         </div>
@@ -220,9 +246,11 @@ const About = () => {
                 viewport={{ once: true }}
                 className="text-gray-700 mb-4 leading-relaxed"
               >
-                GGRAY Racking System is a leading manufacturer based in Guwahati, Assam, specializing in 
-                industrial warehouse storage solutions. With over 20 years of experience, we have established 
-                ourselves as the most trusted name in Northeast India for quality racking systems.
+                GGRAY Racking System is a leading manufacturer based in
+                Guwahati, Assam, specializing in industrial warehouse storage
+                solutions. With over 20 years of experience, we have established
+                ourselves as the most trusted name in Northeast India for
+                quality racking systems.
               </motion.p>
               <motion.p
                 variants={fadeLeft}
@@ -232,8 +260,9 @@ const About = () => {
                 viewport={{ once: true }}
                 className="text-gray-700 mb-4 leading-relaxed"
               >
-                We manufacture a comprehensive range of products including heavy-duty racks, pallet racking 
-                systems, mezzanine floors, cantilever racks, slotted angle racks, mobile compactors, and 
+                We manufacture a comprehensive range of products including
+                heavy-duty racks, pallet racking systems, mezzanine floors,
+                cantilever racks, slotted angle racks, mobile compactors, and
                 custom storage solutions tailored to your specific needs.
               </motion.p>
               <motion.p
@@ -244,8 +273,9 @@ const About = () => {
                 viewport={{ once: true }}
                 className="text-gray-700 leading-relaxed"
               >
-                Our commitment to sustainability, premium quality materials, and strong engineering has made 
-                us the preferred choice for warehouse owners, FMCG distributors, pharmaceutical companies, 
+                Our commitment to sustainability, premium quality materials, and
+                strong engineering has made us the preferred choice for
+                warehouse owners, FMCG distributors, pharmaceutical companies,
                 and logistics facilities across the region.
               </motion.p>
             </div>
@@ -282,11 +312,15 @@ const About = () => {
                   <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                     <Target className="text-orange-600" size={32} />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Our Mission
+                  </h3>
                   <p className="text-gray-700 leading-relaxed">
-                    To deliver innovative, sustainable, and cost-effective storage solutions that maximize 
-                    warehouse efficiency and help businesses optimize their space utilization. We strive to 
-                    be the most reliable partner for industrial storage needs in Northeast India.
+                    To deliver innovative, sustainable, and cost-effective
+                    storage solutions that maximize warehouse efficiency and
+                    help businesses optimize their space utilization. We strive
+                    to be the most reliable partner for industrial storage needs
+                    in Northeast India.
                   </p>
                 </CardContent>
               </Card>
@@ -303,11 +337,15 @@ const About = () => {
                   <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                     <TrendingUp className="text-orange-600" size={32} />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Our Vision
+                  </h3>
                   <p className="text-gray-700 leading-relaxed">
-                    To become India's most trusted name in warehouse storage solutions by consistently 
-                    delivering superior quality products, exceptional customer service, and innovative 
-                    designs that transform the way businesses manage their inventory and logistics.
+                    To become India's most trusted name in warehouse storage
+                    solutions by consistently delivering superior quality
+                    products, exceptional customer service, and innovative
+                    designs that transform the way businesses manage their
+                    inventory and logistics.
                   </p>
                 </CardContent>
               </Card>
@@ -400,7 +438,9 @@ const About = () => {
                 <Award size={40} />
               </div>
               <h3 className="text-xl font-bold mb-3">Quality First</h3>
-              <p className="text-gray-400">Premium materials and rigorous quality control in every product</p>
+              <p className="text-gray-400">
+                Premium materials and rigorous quality control in every product
+              </p>
             </motion.div>
             <motion.div
               variants={itemBounce}
@@ -411,7 +451,9 @@ const About = () => {
                 <Users size={40} />
               </div>
               <h3 className="text-xl font-bold mb-3">Customer Focus</h3>
-              <p className="text-gray-400">Dedicated to understanding and exceeding customer expectations</p>
+              <p className="text-gray-400">
+                Dedicated to understanding and exceeding customer expectations
+              </p>
             </motion.div>
             <motion.div
               variants={itemBounce}
@@ -422,7 +464,9 @@ const About = () => {
                 <CheckCircle2 size={40} />
               </div>
               <h3 className="text-xl font-bold mb-3">Reliability</h3>
-              <p className="text-gray-400">On-time delivery and dependable after-sales support</p>
+              <p className="text-gray-400">
+                On-time delivery and dependable after-sales support
+              </p>
             </motion.div>
             <motion.div
               variants={itemBounce}
@@ -433,7 +477,9 @@ const About = () => {
                 <TrendingUp size={40} />
               </div>
               <h3 className="text-xl font-bold mb-3">Innovation</h3>
-              <p className="text-gray-400">Continuously improving designs and manufacturing processes</p>
+              <p className="text-gray-400">
+                Continuously improving designs and manufacturing processes
+              </p>
             </motion.div>
           </motion.div>
         </div>
@@ -460,10 +506,11 @@ const About = () => {
             viewport={{ once: true }}
             className="text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Our manufacturing facility adheres to the highest quality standards. We are ISO certified and 
-            follow strict quality control processes to ensure every product meets international standards. 
-            Our team of experienced engineers and technicians work with precision to deliver storage 
-            solutions that are built to last decades.
+            Our manufacturing facility adheres to the highest quality standards.
+            We are ISO certified and follow strict quality control processes to
+            ensure every product meets international standards. Our team of
+            experienced engineers and technicians work with precision to deliver
+            storage solutions that are built to last decades.
           </motion.p>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <motion.div
@@ -474,8 +521,12 @@ const About = () => {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-lg shadow-lg"
             >
-              <div className="text-5xl font-bold text-orange-600 mb-2">500+</div>
-              <div className="text-gray-700 font-semibold">Projects Completed</div>
+              <div className="text-5xl font-bold text-orange-600 mb-2">
+                500+
+              </div>
+              <div className="text-gray-700 font-semibold">
+                Projects Completed
+              </div>
             </motion.div>
             <motion.div
               variants={scaleIn}
@@ -485,8 +536,12 @@ const About = () => {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-lg shadow-lg"
             >
-              <div className="text-5xl font-bold text-orange-600 mb-2">300+</div>
-              <div className="text-gray-700 font-semibold">Satisfied Clients</div>
+              <div className="text-5xl font-bold text-orange-600 mb-2">
+                300+
+              </div>
+              <div className="text-gray-700 font-semibold">
+                Satisfied Clients
+              </div>
             </motion.div>
             <motion.div
               variants={fadeRight}
@@ -497,7 +552,9 @@ const About = () => {
               className="bg-white p-8 rounded-lg shadow-lg"
             >
               <div className="text-5xl font-bold text-orange-600 mb-2">20+</div>
-              <div className="text-gray-700 font-semibold">Years Experience</div>
+              <div className="text-gray-700 font-semibold">
+                Years Experience
+              </div>
             </motion.div>
           </div>
         </div>
